@@ -39,23 +39,7 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true">
-        <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop class="sky-a" offset="0%" stop-color="#16283a"/>
-              <stop class="sky-b" offset="100%" stop-color="#547792"/>
-            </linearGradient>
-          </defs>
-          <rect width="1440" height="800" fill="url(#sky)"/>
-          <g class="peaks peaks-back">
-            <polygon points="0,560 160,390 340,520 560,300 820,530 1040,280 1260,480 1440,360 1440,800 0,800"/>
-          </g>
-          <g class="peaks peaks-front">
-            <polygon points="0,680 220,470 470,640 720,420 980,620 1220,460 1440,600 1440,800 0,800"/>
-          </g>
-        </svg>
-      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-copy">
         <p class="hello">Hi, I am</p>
         <h1>Maria Khelly</h1>
@@ -107,7 +91,7 @@
     <section class="section" id="work">
       <p class="kicker">Selected work</p>
       <h2>Projects</h2>
-      <p class="section-lead">Five academic projects. Matarix is the public website. The others open on this page, with GitHub where the code is published.</p>
+      <p class="section-lead">Five academic projects. Matarix and the IncuVue egg dashboard are public. The rest open on this page, with GitHub where the code is published.</p>
       <div class="works">
         <article class="work">
           <p class="tag">Web · Live site</p>
@@ -120,22 +104,23 @@
           </div>
         </article>
         <article class="work">
-          <p class="tag">Mobile · GitHub</p>
+          <p class="tag">Mobile · Admin dashboard</p>
           <h3>IncuVue</h3>
-          <p>Smart incubator for Organikong Filipino Farm. Monitoring, camera results, batch history, and alerts.</p>
+          <p>Smart incubator for Organikong Filipino Farm. The phone app monitors the batch. The admin site shows egg analytics.</p>
           <p class="meta">Flutter · Firebase · Roboflow · IoT</p>
           <div class="actions">
-            <a class="btn" href="#incuvue">Open the screens</a>
+            <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Egg analytics</a>
+            <a class="btn btn-ghost" href="#incuvue">App screens</a>
             <button class="btn btn-ghost" type="button" data-open="incuvue">Details</button>
           </div>
         </article>
         <article class="work">
           <p class="tag">Mobile · On this page</p>
           <h3>AquaGrow</h3>
-          <p>Smart plant monitoring. Plant and sensor records, checked against the results the system should give.</p>
-          <p class="meta">Mobile app · Database · IoT sensors</p>
+          <p>A mobile smart watering system. Soil moisture sensors water the plant, and the app shows the reading.</p>
+          <p class="meta">PEMBEDS · April 2025 · Android · IoT</p>
           <div class="actions">
-            <button class="btn" type="button" data-open="aquagrow">Read the project</button>
+            <a class="btn" href="#aquagrow">Read the project</a>
           </div>
         </article>
         <article class="work">
@@ -160,45 +145,54 @@
     </section>
 
     <section class="section studio" id="incuvue">
-      <div class="studio-copy">
-        <p class="kicker">Mobile</p>
-        <h2>IncuVue screens</h2>
-        <p>IncuVue is a phone app, so these screens are the link. Tap Home, Controls, or Tray. The source is on GitHub.</p>
-        <div class="actions">
-          <a class="btn" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">GitHub · Incuvue</a>
-          <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
-        </div>
-      </div>
-      <div class="phone" id="phone">
-        <div class="phone-screens">
-          <div class="screen is-on" id="screen-dashboard" data-screen="dashboard">
-            <header><strong>Dashboard</strong><span>Settings</span></header>
-            <div class="mint"><small>Incubation day</small><b>Day 12</b></div>
-            <div class="pair">
-              <div><small>Temperature</small><b>37.5°</b></div>
-              <div><small>Humidity</small><b>55%</b></div>
-            </div>
-            <p class="ok">All systems normal</p>
+      <p class="kicker">IncuVue, in order</p>
+      <h2>What each screen does</h2>
+      <div class="walk">
+        <figure class="device">
+          <img id="shot" src="screens/01-start.jpg" alt="IncuVue start screen">
+        </figure>
+        <div>
+          <p class="step" id="step-count">1 of 10</p>
+          <h3 id="step-title">Start incubation</h3>
+          <p id="step-text"></p>
+          <div class="actions">
+            <button class="btn btn-ghost" type="button" id="prev">Previous</button>
+            <button class="btn" type="button" id="next">Next</button>
           </div>
-          <div class="screen" id="screen-controls" data-screen="controls">
-            <header><strong>Controls</strong></header>
-            <button class="switch" type="button" aria-pressed="true"><span>Heater</span><i></i></button>
-            <button class="switch" type="button" aria-pressed="true"><span>Circulation fan</span><i></i></button>
-            <button class="switch" type="button" aria-pressed="false"><span>Ventilation fan</span><i></i></button>
-            <p class="ok">Egg tilting · 2 hours</p>
-          </div>
-          <div class="screen" id="screen-tray" data-screen="tray">
-            <header><strong>Egg tray</strong></header>
-            <div class="eggs" aria-hidden="true"><span></span><span></span><span></span><span class="dim"></span><span></span><span></span><span class="dim"></span><span></span></div>
-            <p class="ok">Seen 10 · Day 12</p>
+          <ol class="step-list" id="step-list"></ol>
+          <div class="actions">
+            <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Egg analytics dashboard</a>
+            <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">GitHub · Incuvue</a>
+            <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
           </div>
         </div>
-        <nav class="phone-nav" aria-label="IncuVue screens">
-          <button type="button" class="is-on" data-screen-btn="dashboard">Home</button>
-          <button type="button" data-screen-btn="controls">Controls</button>
-          <button type="button" data-screen-btn="tray">Tray</button>
-        </nav>
       </div>
+    </section>
+
+    <section class="section" id="aquagrow">
+      <p class="kicker">AquaGrow</p>
+      <h2>A mobile smart plant watering system</h2>
+      <p class="meta">Programming Embedded Systems · National University · April 2025 · Submitted to Mr. Crimgene E. Villanueva</p>
+      <p>AquaGrow is a group project for PEMBEDS. The team is Maria Khelly C. David, Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis. It is a small watering system for home plants, not a farm.</p>
+      <div class="story">
+        <article>
+          <h3>The problem</h3>
+          <p>People forget to water plants, or they water too much. Busy schedules and not knowing how wet the soil is leads to unhealthy plants and wasted water. Reminders and self-watering pots do not look at the soil in the moment. Bigger smart systems are often costly.</p>
+        </article>
+        <article>
+          <h3>What it does</h3>
+          <p>A soil moisture sensor reads how wet the soil is. The system waters from that reading, so the plant gets water when it needs it. An Android app shows the moisture level and watering status, and the person can water by hand or set a schedule.</p>
+        </article>
+        <article>
+          <h3>What it covers</h3>
+          <p>Small indoor and outdoor plants at home. It watches soil moisture only, not temperature, humidity, or light. It connects by Wi-Fi or Bluetooth, and the app in this project is for Android. It was tested on a few plant types and soils.</p>
+        </article>
+        <article>
+          <h3>Why it matters</h3>
+          <p>The plant gets water at the right time, and less water is wasted. It is meant to be simple enough for someone new to plants. It is also a first step toward sensor-based gardening at home.</p>
+        </article>
+      </div>
+      <p>On this project I organized the plant and sensor records and tested the system against the results it was expected to give. There is no public website for AquaGrow, so this section is the link.</p>
     </section>
 
     <section class="section skills" id="skills">
@@ -261,18 +255,21 @@
       <p class="tag">IncuVue · Mobile</p>
       <h2>Smart incubator</h2>
       <p>Client: Organikong Filipino Farm. I developed the mobile application for monitoring, camera results, and batch history, prepared user guides, and added alerts when temperature or humidity moved out of range.</p>
-      <p>Built with Flutter, Firebase, Roboflow, and IoT sensors. It is not a website. The screens are on this page, and the code is on GitHub.</p>
+      <p>Built with Flutter, Firebase, Roboflow, and IoT sensors. The phone screens are on this page. The admin site is the egg analytics dashboard, and the app code is on GitHub.</p>
       <div class="actions">
-        <a class="btn" href="#incuvue" data-close>Open the screens</a>
+        <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Egg analytics dashboard</a>
+        <a class="btn btn-ghost" href="#incuvue" data-close>Open the screens</a>
         <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">Incuvue</a>
         <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
       </div>
     </article>
     <article data-case="aquagrow" hidden>
       <p class="tag">AquaGrow · Mobile</p>
-      <h2>Smart plant monitoring</h2>
-      <p>A mobile system for plants and sensors. I organized the plant and sensor records and tested the system responses against the results they were expected to give.</p>
-      <p>This one is not hosted. The project lives here as a case study until there is a public address or a repository to link.</p>
+      <h2>Smart plant watering</h2>
+      <p>A PEMBEDS group project, April 2025, with Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis. Sensors water the plant from soil moisture, and an Android app shows the reading.</p>
+      <div class="actions">
+        <a class="btn" href="#aquagrow" data-close>Read the full note</a>
+      </div>
     </article>
     <article data-case="coffee" hidden>
       <p class="tag">Circle Coffee · Web</p>
