@@ -99,8 +99,8 @@
           <p>Ordering and delivery for Matarik Construction Supply. Website, interface, and customer, order, and transaction records.</p>
           <p class="meta">Firebase · Hostinger · Figma</p>
           <div class="actions">
-            <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Open matarix.store</a>
-            <button class="btn btn-ghost" type="button" data-open="matarix">Details</button>
+            <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Website</a>
+            <a class="btn btn-ghost" href="#projects" data-slide="matarix">Read the project</a>
           </div>
         </article>
         <article class="work">
@@ -110,8 +110,7 @@
           <p class="meta">Flutter · Firebase · Roboflow · IoT</p>
           <div class="actions">
             <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
-            <a class="btn btn-ghost" href="#incuvue">App screens</a>
-            <button class="btn btn-ghost" type="button" data-open="incuvue">Details</button>
+            <a class="btn btn-ghost" href="#projects" data-slide="incuvue">Read the project</a>
           </div>
         </article>
         <article class="work">
@@ -120,7 +119,7 @@
           <p>A mobile smart watering system. Soil moisture sensors water the plant, and the app shows the reading.</p>
           <p class="meta">PEMBEDS · April 2025 · Android · IoT</p>
           <div class="actions">
-            <a class="btn" href="#aquagrow">Read the project</a>
+            <a class="btn" href="#projects" data-slide="aquagrow">Read the project</a>
           </div>
         </article>
         <article class="work">
@@ -129,7 +128,7 @@
           <p>Online ordering and reservations. SQL for the menu and bookings, plus work on the ordering interface.</p>
           <p class="meta">MySQL · SQL · Interface design</p>
           <div class="actions">
-            <button class="btn" type="button" data-open="coffee">Read the project</button>
+            <a class="btn" href="#projects" data-slide="coffee">Read the project</a>
           </div>
         </article>
         <article class="work">
@@ -138,7 +137,7 @@
           <p>A quiz application. Timer results and scores checked against the outcomes they should produce.</p>
           <p class="meta">Mobile app · Interface design</p>
           <div class="actions">
-            <button class="btn" type="button" data-open="kuwiz">Read the project</button>
+            <a class="btn" href="#projects" data-slide="kuwiz">Read the project</a>
           </div>
         </article>
       </div>
@@ -169,30 +168,141 @@
       </div>
     </section>
 
-    <section class="section" id="aquagrow">
-      <p class="kicker">AquaGrow</p>
-      <h2>A mobile smart plant watering system</h2>
-      <p class="meta">Programming Embedded Systems · National University · April 2025 · Submitted to Mr. Crimgene E. Villanueva</p>
-      <p>AquaGrow is a group project for PEMBEDS. The team is Maria Khelly C. David, Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis. It is a small watering system for home plants, not a farm.</p>
-      <div class="story">
-        <article>
-          <h3>The problem</h3>
-          <p>People forget to water plants, or they water too much. Busy schedules and not knowing how wet the soil is leads to unhealthy plants and wasted water. Reminders and self-watering pots do not look at the soil in the moment. Bigger smart systems are often costly.</p>
-        </article>
-        <article>
-          <h3>What it does</h3>
-          <p>A soil moisture sensor reads how wet the soil is. The system waters from that reading, so the plant gets water when it needs it. An Android app shows the moisture level and watering status, and the person can water by hand or set a schedule.</p>
-        </article>
-        <article>
-          <h3>What it covers</h3>
-          <p>Small indoor and outdoor plants at home. It watches soil moisture only, not temperature, humidity, or light. It connects by Wi-Fi or Bluetooth, and the app in this project is for Android. It was tested on a few plant types and soils.</p>
-        </article>
-        <article>
-          <h3>Why it matters</h3>
-          <p>The plant gets water at the right time, and less water is wasted. It is meant to be simple enough for someone new to plants. It is also a first step toward sensor-based gardening at home.</p>
-        </article>
+    <section class="section" id="projects">
+      <div class="slider">
+        <button class="slider-arrow" type="button" id="proj-prev" aria-label="Previous project">‹</button>
+        <div class="slides">
+          <article class="slide is-on" data-project="matarix">
+            <p class="kicker">Matarix</p>
+            <h2>A web-based ordering system with delivery tracking</h2>
+            <p class="meta">Introduction to System and Design for IT · MNTSDEV · NU Fairview</p>
+            <p>A group project for Matarik Construction Supply. The team is Maria Khelly C. David, Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis.</p>
+            <div class="story">
+              <article>
+                <h3>The problem</h3>
+                <p>Orders come in by phone or as a walk-in, so the record is easy to get wrong. Deliveries are arranged by hand, with no shared view of where an order is. Customers wait without an update, and the order team and the delivery team can miss each other.</p>
+              </article>
+              <article>
+                <h3>What it does</h3>
+                <p>Customers browse materials, place an order, choose a delivery time, and follow it until it arrives. Staff keep inventory, schedules, drivers, and transaction records in one place. Payment is on site or by GCash QR, and an SMS notes the delivery scheduled for the day.</p>
+              </article>
+              <article>
+                <h3>What it covers</h3>
+                <p>Order entry, delivery scheduling, order history, accounts with roles, a status board, inventory, search, and feedback after delivery. A missed delivery is rescheduled by staff. The site does not show the driver on a map. Payment is on site or GCash QR.</p>
+              </article>
+              <article>
+                <h3>Why it matters</h3>
+                <p>The shop gets fewer order mistakes and a clearer delivery list. Customers can see the status of an order. Staff spend less time taking orders by phone. I built the website and interface, and kept the customer, order, and transaction records consistent.</p>
+              </article>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
+          </article>
+          <article class="slide" data-project="incuvue">
+            <p class="kicker">IncuVue</p>
+            <h2>A smart incubator for a small farm</h2>
+            <p class="meta">Organikong Filipino Farm · Flutter · Firebase · Roboflow · IoT</p>
+            <p>A phone app and a website for one hatching batch. The camera photos are checked by Roboflow, and the website holds those egg results.</p>
+            <div class="story">
+              <article>
+                <h3>The problem</h3>
+                <p>A hatch needs steady heat, humidity, turning, and a look at the eggs. Checking all of that by hand is easy to miss, and a problem can show up only after the batch has already drifted.</p>
+              </article>
+              <article>
+                <h3>What it does</h3>
+                <p>The app sets incubation and lockdown days, temperature and humidity ranges, how often the tray turns, and how often the camera takes a photo. The dashboard shows the live readings and alerts. Roboflow marks each egg in the photo as normal or cracked.</p>
+              </article>
+              <article>
+                <h3>What it covers</h3>
+                <p>One batch at a time: climate, water tray, heater and fans, tilt, and camera. The screens on this page walk through that setup. The website shows the egg results from those photos.</p>
+              </article>
+              <article>
+                <h3>Why it matters</h3>
+                <p>The farm can see the batch without standing at the box, and get an alert when temperature or humidity leaves the set range. I built the mobile app, prepared the guides, and added those alerts.</p>
+              </article>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
+              <a class="btn btn-ghost" href="#incuvue">App screens</a>
+            </div>
+          </article>
+          <article class="slide" data-project="aquagrow">
+            <p class="kicker">AquaGrow</p>
+            <h2>A mobile smart plant watering system</h2>
+            <p class="meta">Programming Embedded Systems · National University · April 2025 · Submitted to Mr. Crimgene E. Villanueva</p>
+            <p>AquaGrow is a group project for PEMBEDS. The team is Maria Khelly C. David, Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis. It is a small watering system for home plants, not a farm.</p>
+            <div class="story">
+              <article>
+                <h3>The problem</h3>
+                <p>People forget to water plants, or they water too much. Busy schedules and not knowing how wet the soil is leads to unhealthy plants and wasted water. Reminders and self-watering pots do not look at the soil in the moment. Bigger smart systems are often costly.</p>
+              </article>
+              <article>
+                <h3>What it does</h3>
+                <p>A soil moisture sensor reads how wet the soil is. The system waters from that reading, so the plant gets water when it needs it. An Android app shows the moisture level and watering status, and the person can water by hand or set a schedule.</p>
+              </article>
+              <article>
+                <h3>What it covers</h3>
+                <p>Small indoor and outdoor plants at home. It watches soil moisture only, not temperature, humidity, or light. It connects by Wi-Fi or Bluetooth, and the app in this project is for Android. It was tested on a few plant types and soils.</p>
+              </article>
+              <article>
+                <h3>Why it matters</h3>
+                <p>The plant gets water at the right time, and less water is wasted. It is meant to be simple enough for someone new to plants. It is also a first step toward sensor-based gardening at home.</p>
+              </article>
+            </div>
+            <p>On this project I organized the plant and sensor records and tested the system against the results it was expected to give. There is no public website for AquaGrow, so this section is the link.</p>
+          </article>
+          <article class="slide" data-project="coffee">
+            <p class="kicker">Circle Coffee</p>
+            <h2>Online ordering and table reservations</h2>
+            <p class="meta">MySQL · SQL · Interface design</p>
+            <p>A class website for a café. Customers order from the menu and reserve a table. The records sit in MySQL.</p>
+            <div class="story">
+              <article>
+                <h3>The problem</h3>
+                <p>A café that takes orders and reservations by hand can lose the thread between the menu, the booking, and what was actually requested. Staff then have to ask again, and the count of orders is hard to trust.</p>
+              </article>
+              <article>
+                <h3>What it does</h3>
+                <p>The site lets someone browse the menu, place an order, and reserve a table. SQL stores the menu and the reservation records. The ordering screen is where the customer builds the order.</p>
+              </article>
+              <article>
+                <h3>What it covers</h3>
+                <p>Menu items, orders, and reservations for one café. It is a class project on this page. There is no public shop for it.</p>
+              </article>
+              <article>
+                <h3>Why it matters</h3>
+                <p>Orders and bookings stay in one set of records, so what was requested can be checked against what was stored. I wrote the SQL for the menu and reservations and worked on the ordering interface.</p>
+              </article>
+            </div>
+          </article>
+          <article class="slide" data-project="kuwiz">
+            <p class="kicker">Kuwiz</p>
+            <h2>A mobile quiz</h2>
+            <p class="meta">Mobile app · Interface design</p>
+            <p>A class quiz app. Each round runs on a timer, and the score comes from the answers given in that round.</p>
+            <div class="story">
+              <article>
+                <h3>The problem</h3>
+                <p>A quiz only works if the timer and the score stay honest. If the clock or the points drift, the result does not match what the player actually did.</p>
+              </article>
+              <article>
+                <h3>What it does</h3>
+                <p>The player answers questions while a timer runs. The score is counted from those answers. The screen shows the question, the time left, and the result.</p>
+              </article>
+              <article>
+                <h3>What it covers</h3>
+                <p>One quiz session at a time, with a timer and a score. It is a class app. There is no public store listing.</p>
+              </article>
+              <article>
+                <h3>Why it matters</h3>
+                <p>The timer result and the score can be checked against the outcome they should produce. I tested those results and worked on the interface.</p>
+              </article>
+            </div>
+          </article>
+        </div>
+        <button class="slider-arrow" type="button" id="proj-next" aria-label="Next project">›</button>
       </div>
-      <p>On this project I organized the plant and sensor records and tested the system against the results it was expected to give. There is no public website for AquaGrow, so this section is the link.</p>
     </section>
 
     <section class="section skills" id="skills">
@@ -228,7 +338,6 @@
         <a href="tel:+639687737494">0968 773 7494</a>
         <a href="https://www.linkedin.com/in/maria-khelly-c-david-a300b6375" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/Khelkhel08" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://matarix.store" target="_blank" rel="noopener noreferrer">matarix.store</a>
       </div>
     </section>
   </main>
@@ -238,53 +347,6 @@
     <a href="#home">Back to top</a>
   </footer>
 
-  <dialog id="case">
-    <article data-case="matarix">
-      <p class="tag">Matarix · Web</p>
-      <h2>Ordering and delivery</h2>
-      <p>Client: Matarik Construction Supply. I developed the website and user interface for ordering, monitoring, and delivery tracking, and organized customer, order, and transaction records so the values stayed consistent.</p>
-      <p>Built with Firebase, Hostinger, and Figma. The public shop is matarix.store. The design pages below also open from this portfolio.</p>
-      <div class="actions">
-        <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Open matarix.store</a>
-        <a class="btn btn-ghost" href="designs/matarix/landing/landing.html" target="_blank" rel="noopener noreferrer">Landing</a>
-        <a class="btn btn-ghost" href="designs/matarix/checkout/Checkout.html" target="_blank" rel="noopener noreferrer">Checkout</a>
-        <a class="btn btn-ghost" href="designs/matarix/receipt/Rp.html" target="_blank" rel="noopener noreferrer">Receipt</a>
-      </div>
-    </article>
-    <article data-case="incuvue" hidden>
-      <p class="tag">IncuVue · Mobile</p>
-      <h2>Smart incubator</h2>
-      <p>Client: Organikong Filipino Farm. I developed the mobile application for monitoring, camera results, and batch history, prepared user guides, and added alerts when temperature or humidity moved out of range.</p>
-      <p>Built with Flutter, Firebase, Roboflow, and IoT sensors. The phone screens are on this page. The website shows the egg results from the camera, and the app code stays on GitHub.</p>
-      <div class="actions">
-        <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
-        <a class="btn btn-ghost" href="#incuvue" data-close>Open the screens</a>
-        <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">Incuvue</a>
-        <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
-      </div>
-    </article>
-    <article data-case="aquagrow" hidden>
-      <p class="tag">AquaGrow · Mobile</p>
-      <h2>Smart plant watering</h2>
-      <p>A PEMBEDS group project, April 2025, with Sherwin L. Gloriane, Henzo Timothy S. Quito, and Joshua A. Villaresis. Sensors water the plant from soil moisture, and an Android app shows the reading.</p>
-      <div class="actions">
-        <a class="btn" href="#aquagrow" data-close>Read the full note</a>
-      </div>
-    </article>
-    <article data-case="coffee" hidden>
-      <p class="tag">Circle Coffee · Web</p>
-      <h2>Ordering and reservations</h2>
-      <p>An online ordering and reservation system. I wrote SQL queries for the menu and reservation records and contributed to the ordering interface.</p>
-      <p>Technologies: MySQL, SQL, and interface design. There is no public site for it yet, so this page is the link.</p>
-    </article>
-    <article data-case="kuwiz" hidden>
-      <p class="tag">Kuwiz · Mobile</p>
-      <h2>Quiz application</h2>
-      <p>A mobile quiz app. I tested timer results and quiz scores against the outcomes they should produce, and worked on the interface.</p>
-      <p>There is no public store listing, so the write-up here is how the project is linked.</p>
-    </article>
-    <button class="btn btn-ghost close" type="button" data-close>Close</button>
-  </dialog>
   <script src="main.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 const root = document.documentElement;
 const themeButton = document.querySelector(".theme");
-const dialog = document.querySelector("#case");
 const steps = [
   {
     src: "screens/01-start.jpg",
@@ -84,27 +83,22 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
-function openCase(id) {
-  const article = dialog.querySelector(`[data-case="${id}"]`);
-  if (!article) return;
-  dialog.querySelectorAll("[data-case]").forEach((node) => {
-    node.hidden = node !== article;
+const slides = [...document.querySelectorAll(".slide")];
+let slideIndex = 0;
+
+function showSlide(index) {
+  if (!slides.length) return;
+  slideIndex = (index + slides.length) % slides.length;
+  slides.forEach((slide, i) => slide.classList.toggle("is-on", i === slideIndex));
+}
+
+document.querySelector("#proj-next").addEventListener("click", () => showSlide(slideIndex + 1));
+document.querySelector("#proj-prev").addEventListener("click", () => showSlide(slideIndex - 1));
+document.querySelectorAll("[data-slide]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const index = slides.findIndex((slide) => slide.dataset.project === link.dataset.slide);
+    if (index >= 0) showSlide(index);
   });
-  if (typeof dialog.showModal === "function" && !dialog.open) dialog.showModal();
-}
-
-function closeCase() {
-  if (dialog.open) dialog.close();
-}
-
-document.querySelectorAll("[data-open]").forEach((node) => {
-  node.addEventListener("click", () => openCase(node.dataset.open));
-});
-document.querySelectorAll("[data-close]").forEach((node) => {
-  node.addEventListener("click", () => closeCase());
-});
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) closeCase();
 });
 
 const shot = document.querySelector("#shot");
