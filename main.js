@@ -5,52 +5,52 @@ const steps = [
   {
     src: "screens/01-start.jpg",
     title: "Start incubation",
-    text: "Nothing is hatching yet. This screen is the empty start. Tap Start Incubation to open a new batch and set it up."
+    text: "No batch is running. Tap Start Incubation to set the days, climate, camera, and tray before a hatch begins."
   },
   {
     src: "screens/02-days.jpg",
     title: "Set days",
-    text: "Choose the first and last day of each stage. Incubation is while the eggs are turned. Lockdown is the last days, when turning stops and humidity goes up. Here that is day 1–18, then day 19–21."
+    text: "Incubation is the turning stage. Lockdown is the last stretch, when turning stops and humidity rises so the chicks can hatch. This setup uses day 1–18 for incubation and day 19–21 for lockdown."
   },
   {
     src: "screens/03-climate.jpg",
     title: "Set climate",
-    text: "Set how warm and how humid the box should stay. Incubation holds about 36.5–37.5°C and 45–55% humidity. Lockdown keeps the same heat and raises humidity to 65–75% so the chicks can hatch."
+    text: "Incubation stays at 36.5–37.5°C and 45–55% humidity. Lockdown keeps the same temperature and raises humidity to 65–75%."
   },
   {
     src: "screens/04-tilt.jpg",
     title: "Capture and tilt",
-    text: "Set how often the tray turns the eggs, and how often the camera takes a photo. Here the tray turns every 1 minute. The camera shoots every 5 minutes in incubation and every 20 minutes in lockdown."
+    text: "The tray turns the eggs every 1 minute. The camera takes a photo every 5 minutes during incubation and every 20 minutes during lockdown. Those photos are what Roboflow checks."
   },
   {
     src: "screens/05-review.jpg",
     title: "Review settings",
-    text: "One last check before the batch starts: climate, lockdown, tilt, and camera. Confirm and start begins the hatch. Back to edit returns to the earlier steps."
+    text: "This is the last check: temperature, humidity, tilt timing, and camera timing. Confirm and start begins the batch. Back to edit returns to the earlier steps."
   },
   {
     src: "screens/06-dash1.jpg",
     title: "Dashboard",
-    text: "The live batch. It is day 1, still in incubation. The alerts say the water tray is empty, and temperature and humidity are below the range you set. Wi-Fi is disconnected. Power is on the main line."
+    text: "Day 1 of incubation for batch 90. The alerts say the water tray is empty, temperature is 33.7°C, and humidity is 42%. Both are below the set range. Wi-Fi is disconnected, and the incubator is on main power."
   },
   {
     src: "screens/07-dash2.jpg",
     title: "Dashboard, continued",
-    text: "Further down the same screen. Auto keeps the climate inside the ranges. Manual lets you switch the heater and fans yourself. Open Controls goes to those switches. Cancel incubation stops the batch."
+    text: "Auto holds temperature and humidity inside the ranges you set, and the pump refills the tray at 15%. Manual opens the heater and fan switches. Cancel incubation stops the batch."
   },
   {
     src: "screens/08-controls.jpg",
     title: "Controls",
-    text: "The heater and both fans are on standby, so they are allowed to run. The tray turns every 1 minute and is tilting right. The water pump is automatic and refills when the sensor is at 15% or below."
+    text: "The heater, circulation fan, and ventilation fan are on standby, so they can run when needed. The tray turns every 1 minute and is tilting right. The water pump refills on its own when the sensor reads 15% or below."
   },
   {
     src: "screens/09-tray.jpg",
     title: "Egg tray",
-    text: "The camera looking at the eggs. It marked 6 as normal and 0 as cracked. You can force a new photo, and switch the view between incubation, lockdown, and hatch."
+    text: "This is the camera view. Roboflow looks at the photo and marks each egg as normal or cracked. This frame shows 6 normal and 0 cracked. Those counts are the analytics on the website. You can take a new photo, or switch the view between incubation, lockdown, and hatch."
   },
   {
     src: "screens/10-cancel.jpg",
     title: "Cancel incubation",
-    text: "This stops the batch and turns the relays off. You have to type CANCEL so it does not happen by mistake. Keep running leaves the hatch going."
+    text: "Stopping the batch turns the relays off. Type CANCEL so it does not happen by accident. Keep running leaves the hatch going."
   }
 ];
 let stepIndex = 0;
