@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Khelly C. David — Portfolio</title>
+  <meta name="description" content="Portfolio of Maria Khelly C. David, Information Technology student at National University Fairview. Web, mobile, and database projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+  <header class="nav">
+    <a class="brand" href="#home">
+      <span class="mark">MK</span>
+      <span>Maria Khelly</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme" type="button" aria-pressed="false">Light mode</button>
+      <a class="nav-phone" href="tel:+639687737494">0968 773 7494</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop class="sky-a" offset="0%" stop-color="#16283a"/>
+              <stop class="sky-b" offset="100%" stop-color="#547792"/>
+            </linearGradient>
+          </defs>
+          <rect width="1440" height="800" fill="url(#sky)"/>
+          <g class="peaks peaks-back">
+            <polygon points="0,560 160,390 340,520 560,300 820,530 1040,280 1260,480 1440,360 1440,800 0,800"/>
+          </g>
+          <g class="peaks peaks-front">
+            <polygon points="0,680 220,470 470,640 720,420 980,620 1220,460 1440,600 1440,800 0,800"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <p class="hello">Hi, I am</p>
+        <h1>Maria Khelly</h1>
+        <p class="hero-role">Information Technology · Mobile and Internet Technology</p>
+        <p class="hero-lead">Fourth-year student at National University Fairview. I build websites, mobile screens, and the records behind them.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/maria-khelly-c-david-a300b6375" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/Khelkhel08" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
+          <a href="mailto:mariakhellydavid@gmail.com" aria-label="Email">@</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <p class="kicker">About me</p>
+      <div class="about-grid">
+        <figure class="portrait">
+          <img src="maria.png" alt="Maria Khelly C. David">
+        </figure>
+        <div>
+          <h2>Hi there. I’m Maria Khelly C. David.</h2>
+          <p class="role">Information Technology student</p>
+          <p>I am in my fourth year of a Bachelor of Science in Information Technology at National University Fairview, specializing in Mobile and Internet Technology, with graduation expected in 2027. My projects cover websites, mobile applications, databases, interfaces, testing, and record keeping.</p>
+          <dl class="facts">
+            <div><dt>School</dt><dd>National University – Fairview</dd></div>
+            <div><dt>Focus</dt><dd>Mobile and Internet Technology</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+639687737494">0968 773 7494</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:mariakhellydavid@gmail.com">mariakhellydavid@gmail.com</a></dd></div>
+            <div><dt>From</dt><dd>Quezon City, Philippines</dd></div>
+            <div><dt>Graduation</dt><dd>Expected 2027</dd></div>
+          </dl>
+          <a class="btn" href="resume.html">View resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <p class="kicker">What I work on</p>
+      <div class="services">
+        <article><h3>Web applications</h3><p>Ordering, delivery, and reservation sites, from the layout through to a hosted build.</p></article>
+        <article><h3>Mobile applications</h3><p>Flutter screens for monitoring, history, quizzes, and day-to-day use.</p></article>
+        <article><h3>Interface design</h3><p>Layouts in Figma and in the browser, made so the next step is easy to find.</p></article>
+        <article><h3>Databases</h3><p>SQL, MySQL, and Firebase for customers, orders, plants, and batches.</p></article>
+        <article><h3>IoT systems</h3><p>ESP32 sensors, readings, and alerts when a value leaves its range.</p></article>
+        <article><h3>Testing</h3><p>Manual checks, consistency reviews, and short guides for the people using the system.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <p class="kicker">Selected work</p>
+      <h2>Projects</h2>
+      <p class="section-lead">Five academic projects. Matarix is the public website. The others open on this page, with GitHub where the code is published.</p>
+      <div class="works">
+        <article class="work">
+          <p class="tag">Web · Live site</p>
+          <h3>Matarix</h3>
+          <p>Ordering and delivery for Matarik Construction Supply. Website, interface, and customer, order, and transaction records.</p>
+          <p class="meta">Firebase · Hostinger · Figma</p>
+          <div class="actions">
+            <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Open matarix.store</a>
+            <button class="btn btn-ghost" type="button" data-open="matarix">Details</button>
+          </div>
+        </article>
+        <article class="work">
+          <p class="tag">Mobile · GitHub</p>
+          <h3>IncuVue</h3>
+          <p>Smart incubator for Organikong Filipino Farm. Monitoring, camera results, batch history, and alerts.</p>
+          <p class="meta">Flutter · Firebase · Roboflow · IoT</p>
+          <div class="actions">
+            <a class="btn" href="#incuvue">Open the screens</a>
+            <button class="btn btn-ghost" type="button" data-open="incuvue">Details</button>
+          </div>
+        </article>
+        <article class="work">
+          <p class="tag">Mobile · On this page</p>
+          <h3>AquaGrow</h3>
+          <p>Smart plant monitoring. Plant and sensor records, checked against the results the system should give.</p>
+          <p class="meta">Mobile app · Database · IoT sensors</p>
+          <div class="actions">
+            <button class="btn" type="button" data-open="aquagrow">Read the project</button>
+          </div>
+        </article>
+        <article class="work">
+          <p class="tag">Web · On this page</p>
+          <h3>Circle Coffee</h3>
+          <p>Online ordering and reservations. SQL for the menu and bookings, plus work on the ordering interface.</p>
+          <p class="meta">MySQL · SQL · Interface design</p>
+          <div class="actions">
+            <button class="btn" type="button" data-open="coffee">Read the project</button>
+          </div>
+        </article>
+        <article class="work">
+          <p class="tag">Mobile · On this page</p>
+          <h3>Kuwiz</h3>
+          <p>A quiz application. Timer results and scores checked against the outcomes they should produce.</p>
+          <p class="meta">Mobile app · Interface design</p>
+          <div class="actions">
+            <button class="btn" type="button" data-open="kuwiz">Read the project</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section studio" id="incuvue">
+      <div class="studio-copy">
+        <p class="kicker">Mobile</p>
+        <h2>IncuVue screens</h2>
+        <p>IncuVue is a phone app, so these screens are the link. Tap Home, Controls, or Tray. The source is on GitHub.</p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">GitHub · Incuvue</a>
+          <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
+        </div>
+      </div>
+      <div class="phone" id="phone">
+        <div class="phone-screens">
+          <div class="screen is-on" id="screen-dashboard" data-screen="dashboard">
+            <header><strong>Dashboard</strong><span>Settings</span></header>
+            <div class="mint"><small>Incubation day</small><b>Day 12</b></div>
+            <div class="pair">
+              <div><small>Temperature</small><b>37.5°</b></div>
+              <div><small>Humidity</small><b>55%</b></div>
+            </div>
+            <p class="ok">All systems normal</p>
+          </div>
+          <div class="screen" id="screen-controls" data-screen="controls">
+            <header><strong>Controls</strong></header>
+            <button class="switch" type="button" aria-pressed="true"><span>Heater</span><i></i></button>
+            <button class="switch" type="button" aria-pressed="true"><span>Circulation fan</span><i></i></button>
+            <button class="switch" type="button" aria-pressed="false"><span>Ventilation fan</span><i></i></button>
+            <p class="ok">Egg tilting · 2 hours</p>
+          </div>
+          <div class="screen" id="screen-tray" data-screen="tray">
+            <header><strong>Egg tray</strong></header>
+            <div class="eggs" aria-hidden="true"><span></span><span></span><span></span><span class="dim"></span><span></span><span></span><span class="dim"></span><span></span></div>
+            <p class="ok">Seen 10 · Day 12</p>
+          </div>
+        </div>
+        <nav class="phone-nav" aria-label="IncuVue screens">
+          <button type="button" class="is-on" data-screen-btn="dashboard">Home</button>
+          <button type="button" data-screen-btn="controls">Controls</button>
+          <button type="button" data-screen-btn="tray">Tray</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div>
+        <p class="kicker left">Skills</p>
+        <h2>From the coursework</h2>
+        <p>These are the tools and tasks in the projects and certifications. The bars show where the recent work sits. They are not a test score.</p>
+        <ul class="certs">
+          <li>Excel Essential Training, Microsoft 365</li>
+          <li>Programming Foundations: Software Testing and QA</li>
+          <li>Software Design: Developing Effective Requirements</li>
+          <li>Microsoft Azure: Security Concepts</li>
+          <li>Planning a Microsoft Azure Solution</li>
+        </ul>
+        <p class="fine">LinkedIn Learning.</p>
+      </div>
+      <ul class="bars">
+        <li><span>Web applications and Flutter</span><i style="--w:92%"></i></li>
+        <li><span>Figma and interface layout</span><i style="--w:84%"></i></li>
+        <li><span>SQL, MySQL, and Firebase</span><i style="--w:86%"></i></li>
+        <li><span>Excel and Google Sheets</span><i style="--w:90%"></i></li>
+        <li><span>IoT sensors and ESP32</span><i style="--w:74%"></i></li>
+        <li><span>Manual testing and guides</span><i style="--w:78%"></i></li>
+      </ul>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="kicker">Contact</p>
+      <h2>Let’s talk</h2>
+      <p>Quezon City, Philippines</p>
+      <div class="contact-links">
+        <a href="mailto:mariakhellydavid@gmail.com">mariakhellydavid@gmail.com</a>
+        <a href="tel:+639687737494">0968 773 7494</a>
+        <a href="https://www.linkedin.com/in/maria-khelly-c-david-a300b6375" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Khelkhel08" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://matarix.store" target="_blank" rel="noopener noreferrer">matarix.store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Maria Khelly C. David</span>
+    <a href="#home">Back to top</a>
+  </footer>
+
+  <dialog id="case">
+    <article data-case="matarix">
+      <p class="tag">Matarix · Web</p>
+      <h2>Ordering and delivery</h2>
+      <p>Client: Matarik Construction Supply. I developed the website and user interface for ordering, monitoring, and delivery tracking, and organized customer, order, and transaction records so the values stayed consistent.</p>
+      <p>Built with Firebase, Hostinger, and Figma. The public shop is matarix.store. The design pages below also open from this portfolio.</p>
+      <div class="actions">
+        <a class="btn" href="https://matarix.store" target="_blank" rel="noopener noreferrer">Open matarix.store</a>
+        <a class="btn btn-ghost" href="designs/matarix/landing/landing.html" target="_blank" rel="noopener noreferrer">Landing</a>
+        <a class="btn btn-ghost" href="designs/matarix/checkout/Checkout.html" target="_blank" rel="noopener noreferrer">Checkout</a>
+        <a class="btn btn-ghost" href="designs/matarix/receipt/Rp.html" target="_blank" rel="noopener noreferrer">Receipt</a>
+      </div>
+    </article>
+    <article data-case="incuvue" hidden>
+      <p class="tag">IncuVue · Mobile</p>
+      <h2>Smart incubator</h2>
+      <p>Client: Organikong Filipino Farm. I developed the mobile application for monitoring, camera results, and batch history, prepared user guides, and added alerts when temperature or humidity moved out of range.</p>
+      <p>Built with Flutter, Firebase, Roboflow, and IoT sensors. It is not a website. The screens are on this page, and the code is on GitHub.</p>
+      <div class="actions">
+        <a class="btn" href="#incuvue" data-close>Open the screens</a>
+        <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">Incuvue</a>
+        <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
+      </div>
+    </article>
+    <article data-case="aquagrow" hidden>
+      <p class="tag">AquaGrow · Mobile</p>
+      <h2>Smart plant monitoring</h2>
+      <p>A mobile system for plants and sensors. I organized the plant and sensor records and tested the system responses against the results they were expected to give.</p>
+      <p>This one is not hosted. The project lives here as a case study until there is a public address or a repository to link.</p>
+    </article>
+    <article data-case="coffee" hidden>
+      <p class="tag">Circle Coffee · Web</p>
+      <h2>Ordering and reservations</h2>
+      <p>An online ordering and reservation system. I wrote SQL queries for the menu and reservation records and contributed to the ordering interface.</p>
+      <p>Technologies: MySQL, SQL, and interface design. There is no public site for it yet, so this page is the link.</p>
+    </article>
+    <article data-case="kuwiz" hidden>
+      <p class="tag">Kuwiz · Mobile</p>
+      <h2>Quiz application</h2>
+      <p>A mobile quiz app. I tested timer results and quiz scores against the outcomes they should produce, and worked on the interface.</p>
+      <p>There is no public store listing, so the write-up here is how the project is linked.</p>
+    </article>
+    <button class="btn btn-ghost close" type="button" data-close>Close</button>
+  </dialog>
+  <script src="main.js"></script>
+</body>
+</html>

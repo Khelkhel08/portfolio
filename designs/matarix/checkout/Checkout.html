@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATARIX - Checkout</title>
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="matarix-checkout.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER NAVIGATION -->
+    <nav class="navbar navbar-expand-lg matarix-header">
+        <div class="container-fluid">
+            <!-- LOGO PLACEHOLDER - Replace this img src with your actual logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/LOGO.png" alt="MATARIX Logo" height="40" class="logo-img">
+            </a>
+            
+            <!-- Mobile menu toggle button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#mobileSearch">
+                <i class="fas fa-search text-white"></i>
+            </button>
+            
+            <!-- SEARCH BAR -->
+            <div class="search-container d-none d-lg-block">
+                <input type="text" class="form-control search-input" placeholder="Search products..." id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <!-- Mobile Search (collapsible) -->
+            <div class="collapse w-100 d-lg-none" id="mobileSearch">
+                <div class="search-container-mobile mt-2">
+                    <input type="text" class="form-control search-input" placeholder="Search products..." id="mobileSearchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <!-- HEADER ICONS - Notifications, Cart, User -->
+            <div class="ml-auto header-icons">
+                <a href="#" class="navbar-icons" id="notificationIcon">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <a href="#" class="navbar-icons" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="navbar-icons" id="userIcon">
+                    <i class="fas fa-user"></i>
+                </a>
+                <!-- Mobile menu toggle for sidebar -->
+                <button class="navbar-icons d-lg-none ml-2" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- SIDEBAR NAVIGATION -->
+            <div class="col-lg-2 sidebar" id="sidebar">
+                <div class="sidebar-overlay d-lg-none" id="sidebarOverlay"></div>
+                <div class="sidebar-content">
+                    <!-- SIDEBAR MENU ITEMS -->
+                    <a href="#" class="sidebar-item" id="ordersLink">
+                        <i class="fas fa-box mr-2"></i>Orders
+                    </a>
+                    <a href="#" class="sidebar-item" id="inventoryLink">
+                        <i class="fas fa-warehouse mr-2"></i>Inventory
+                    </a>
+                    <a href="#" class="sidebar-item" id="deliveriesLink">
+                        <i class="fas fa-truck mr-2"></i>Deliveries
+                    </a>
+                    <a href="#" class="sidebar-item" id="aboutLink">
+                        <i class="fas fa-info-circle mr-2"></i>About Us
+                    </a>
+                    <a href="#" class="sidebar-item" id="logoutLink">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- MAIN CONTENT AREA -->
+            <div class="main-content">
+                <h1 class="checkout-title">Checkout</h1>
+                
+                <div class="row">
+                    <!-- LEFT COLUMN -->
+                    <div class="col-xl-8 col-lg-7">
+                        <!-- DELIVERY INFORMATION CARD -->
+                        <div class="card matarix-card">
+                            <div class="card-header matarix-card-header">
+                                <h5 class="mb-0">Delivery Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                                    <div class="delivery-info">
+                                        <h6 class="font-weight-bold customer-name">Carla Mendoza</h6>
+                                        <p class="mb-1 customer-address">Blk 2 Chavez St. Dalmen Subdivision City</p>
+                                        <p class="mb-0 text-muted customer-phone">09xxxxxxx</p>
+                                    </div>
+                                    <!-- EDIT DELIVERY ADDRESS BUTTON -->
+                                    <button class="btn btn-edit mt-2 mt-md-0" id="editAddressBtn">
+                                        <i class="fas fa-edit mr-1"></i>Edit Delivery Address
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ORDER ITEMS CARD -->
+                        <div class="card matarix-card">
+                            <div class="card-header matarix-card-header">
+                                <h5 class="mb-0">Order Items</h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- ORDER ITEMS TABLE -->
+                                <div class="table-responsive">
+                                    <table class="table table-borderless order-items-table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Product Name</th>
+                                                <th class="d-none d-md-table-cell">Quantity</th>
+                                                <th class="d-none d-lg-table-cell">Selection</th>
+                                                <th class="d-none d-sm-table-cell">Price</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="orderItemsTableBody">
+                                            <!-- ORDER ITEM ROW 1 -->
+                                            <tr class="order-item-row">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <!-- PRODUCT IMAGE PLACEHOLDER -->
+                                                        <img src="images/block.png" alt="5x5-6 Brick" class="product-image mr-2 mr-md-3">
+                                                        <div class="product-details">
+                                                            <span class="product-name">5x5-6 Brick</span>
+                                                            <div class="d-md-none">
+                                                                <small class="text-muted d-block">Qty: 100</small>
+                                                                <small class="text-muted d-lg-none d-block">5in x 5in x 6in</small>
+                                                                <small class="text-muted d-sm-none d-block">₱40.00</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="d-none d-md-table-cell quantity-cell">100</td>
+                                                <td class="d-none d-lg-table-cell selection-cell">5in x 5in x 6in</td>
+                                                <td class="d-none d-sm-table-cell price-cell">₱40.00</td>
+                                                <td class="total-cell font-weight-bold">₱4,000.00</td>
+                                            </tr>
+                                            <!-- ORDER ITEM ROW 2 -->
+                                            <tr class="order-item-row">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <!-- PRODUCT IMAGE PLACEHOLDER -->
+                                                        <img src="images/Steel.jpg" alt="Roof Sand" class="product-image mr-2 mr-md-3">
+                                                        <div class="product-details">
+                                                            <span class="product-name">Roof Sand</span>
+                                                            <div class="d-md-none">
+                                                                <small class="text-muted d-block">Qty: 30</small>
+                                                                <small class="text-muted d-lg-none d-block">50 bags/bulk</small>
+                                                                <small class="text-muted d-sm-none d-block">₱500</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="d-none d-md-table-cell quantity-cell">30</td>
+                                                <td class="d-none d-lg-table-cell selection-cell">50 bags/bulk</td>
+                                                <td class="d-none d-sm-table-cell price-cell">₱500</td>
+                                                <td class="total-cell font-weight-bold">₱15,000.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DELIVERY FEE BREAKDOWN CARD -->
+                        <div class="card matarix-card">
+                            <div class="card-header matarix-card-header">
+                                <h5 class="mb-0">Delivery Fee Breakdown</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="mb-1 font-weight-bold delivery-fee-label">Base Fee</p>
+                                        <p class="mb-0 font-weight-bold delivery-fee-label">Distance Fee</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p class="mb-1 delivery-fee-value" id="baseFee">₱--</p>
+                                        <p class="mb-0 delivery-fee-value" id="distanceFee">₱--</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DELIVERY SCHEDULE CARD -->
+                        <div class="card matarix-card">
+                            <div class="card-header matarix-card-header">
+                                <h5 class="mb-0">Delivery Schedule</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="deliveryDate" class="form-label">Preferred Delivery Date</label>
+                                            <!-- DATE INPUT FIELD -->
+                                            <input type="date" class="form-control matarix-input" id="deliveryDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="deliveryTime" class="form-label">Preferred Time</label>
+                                            <!-- TIME SELECT DROPDOWN -->
+                                            <select class="form-control matarix-input" id="deliveryTime">
+                                                <option value="">Select preferred time</option>
+                                                <option value="morning">8:00 AM - 12:00 PM</option>
+                                                <option value="afternoon">1:00 PM - 5:00 PM</option>
+                                                <option value="evening">6:00 PM - 8:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-note">
+                                    <i class="fas fa-info-circle mr-1"></i>
+                                    <span class="text-muted small">
+                                        Delivery is only available during the selected time and will be confirmed by our team.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN - ORDER SUMMARY -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="order-summary matarix-card sticky-summary">
+                            <h5 class="font-weight-bold mb-4 summary-title">Order Summary</h5>
+                            
+                            <!-- SUMMARY ROWS -->
+                            <div class="summary-row">
+                                <span class="summary-label">Subtotal:</span>
+                                <span class="summary-value" id="subtotalValue">₱19,000</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span class="summary-label">Delivery Fee:</span>
+                                <span class="summary-value" id="deliveryFeeValue">₱650.00</span>
+                            </div>
+                            
+                            <div class="summary-row total-row">
+                                <span class="summary-label">Total:</span>
+                                <span class="summary-value" id="totalValue">₱19,650.00</span>
+                            </div>
+                            
+                            <!-- PAYMENT METHOD -->
+                            <div class="payment-section">
+                                <h6 class="font-weight-bold mb-3 payment-title">Payment Method</h6>
+                                <div class="payment-method" id="paymentMethodContainer">
+                                    <div class="d-flex align-items-center">
+                                        <!-- GCASH LOGO PLACEHOLDER -->
+                                        <img src="images/Gcash.png" alt="GCash" class="gcash-logo mr-3">
+                                        <span class="font-weight-bold payment-method-name">GCash</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- PROCEED TO CHECKOUT BUTTON -->
+                            <button class="btn btn-matarix" id="proceedCheckoutBtn">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                Proceed to Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 4 JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mobile sidebar toggle script -->
+    <script>
+        $(document).ready(function() {
+            // SIDEBAR TOGGLE FUNCTIONALITY
+            $('#sidebarToggle').click(function() {
+                $('#sidebar').toggleClass('show');
+                $('body').toggleClass('sidebar-open');
+            });
+            
+            // SIDEBAR OVERLAY CLICK TO CLOSE
+            $('#sidebarOverlay').click(function() {
+                $('#sidebar').removeClass('show');
+                $('body').removeClass('sidebar-open');
+            });
+            
+            // CLOSE SIDEBAR ON WINDOW RESIZE IF LARGE SCREEN
+            $(window).resize(function() {
+                if ($(window).width() >= 992) {
+                    $('#sidebar').removeClass('show');
+                    $('body').removeClass('sidebar-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+/* MATARIX PAYMENT RECEIPT PAGE STYLES */
+/* Color palette based on provided gradient references */
+
+:root {
+    /* Main MATARIX colors from gradient reference */
+    --matarix-primary: #252121;    /* 7% stop */
+    --matarix-secondary: #665D5D;  /* 34% stop */
+    --matarix-accent: #2C1E1E;     /* 96% stop */
+    
+    /* Alternative gradient colors from second reference */
+    --matarix-red-dark: #940909;   /* 0% stop */
+    --matarix-red-mid: #BE3030;    /* 38% stop */
+    --matarix-red-light: #BC3131;  /* 68% stop */
+    --matarix-red-bright: #911616; /* 100% stop */
+    
+    /* Supporting colors */
+    --matarix-white: #ffffff;
+    --matarix-light-gray: #f8f9fa;
+    --matarix-border: #dee2e6;
+    --matarix-text-muted: #6c757d;
+    --matarix-success: #28a745;
+    --matarix-warning: #ffc107;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--matarix-light-gray);
+    line-height: 1.6;
+}
+
+/* HEADER NAVIGATION STYLES */
+.matarix-header {
+    background: linear-gradient(135deg, var(--matarix-red-dark) 0%, var(--matarix-red-mid) 38%, var(--matarix-red-light) 68%, var(--matarix-red-bright) 100%) !important;
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: var(--matarix-white) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* SEARCH BAR CONTAINER */
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-container-mobile {
+    position: relative;
+    width: 100%;
+}
+
+/* SEARCH INPUT FIELD */
+.search-input {
+    border-radius: 25px;
+    padding: 8px 40px 8px 20px;
+    border: 2px solid transparent;
+    width: 100%;
+    background-color: var(--matarix-white);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--matarix-red-light);
+    box-shadow: 0 0 0 0.2rem rgba(188, 49, 49, 0.25);
+    outline: none;
+}
+
+/* SEARCH ICON */
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--matarix-text-muted);
+    pointer-events: none;
+}
+
+/* HEADER ICONS (Notifications, Cart, User) */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons {
+    color: var(--matarix-white);
+    font-size: 1.2rem;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+}
+
+.navbar-icons:hover {
+    color: var(--matarix-white);
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+/* SIDEBAR NAVIGATION STYLES */
+.sidebar {
+    background: linear-gradient(180deg, var(--matarix-primary) 7%, var(--matarix-secondary) 34%, var(--matarix-accent) 96%);
+    min-height: calc(100vh - 70px);
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 160px;
+    flex: 0 0 160px;
+}
+
+.sidebar-content {
+    position: relative;
+    z-index: 10;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    display: none;
+}
+
+/* SIDEBAR MENU ITEMS */
+.sidebar-item {
+    padding: 15px 20px;
+    color: var(--matarix-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255,255,255,0.15);
+    color: var(--matarix-white);
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.sidebar-item.active {
+    background-color: rgba(255,255,255,0.25);
+    border-left: 4px solid var(--matarix-red-light);
+}
+
+.sidebar-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* MAIN CONTENT AREA STYLES */
+.main-content {
+    padding: 30px;
+    min-height: calc(100vh - 70px);
+    flex: 1;
+    width: calc(100% - 160px);
+    padding-left: 30px;
+    margin-left: 0;
+}
+
+/* CONTENT CONTAINER ADJUSTMENTS */
+.container-fluid {
+    padding: 0;
+}
+
+.container-fluid .row {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+/* RECEIPT HEADER STYLES */
+.receipt-header {
+    margin-bottom: 30px;
+}
+
+.receipt-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--matarix-primary);
+    margin-bottom: 5px;
+}
+
+.receipt-subtitle {
+    color: var(--matarix-text-muted);
+    font-size: 0.95rem;
+}
+
+/* HEADER BUTTONS */
+.btn-back {
+    background: none;
+    border: 2px solid var(--matarix-secondary);
+    color: var(--matarix-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--matarix-secondary);
+    color: var(--matarix-white);
+    transform: translateY(-1px);
+}
+
+.btn-download {
+    background: linear-gradient(135deg, var(--matarix-primary) 0%, var(--matarix-secondary) 100%);
+    border: none;
+    color: var(--matarix-white);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #1a1818 0%, #5a5151 100%);
+    color: var(--matarix-white);
+    transform: translateY(-2px);
+}
+
+.btn-print {
+    background: none;
+    border: 2px solid var(--matarix-primary);
+    color: var(--matarix-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-print:hover {
+    background-color: var(--matarix-primary);
+    color: var(--matarix-white);
+    transform: translateY(-1px);
+}
+
+/* RECEIPT CONTAINER */
+.receipt-container {
+    background: var(--matarix-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* COMPANY HEADER */
+.company-header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--matarix-border);
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    width: 60px;
+    height: auto;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--matarix-primary);
+    margin-bottom: 5px;
+}
+
+.company-tagline {
+    color: var(--matarix-text-muted);
+    font-size: 0.9rem;
+}
+
+/* PAYMENT STATUS */
+.payment-status {
+    margin-top: 10px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-complete {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--matarix-success);
+    border: 2px solid var(--matarix-success);
+}
+
+/* INFO SECTION */
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+}
+
+.info-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--matarix-primary);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--matarix-red-light);
+    padding-bottom: 5px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 0;
+}
+
+.info-label {
+    color: var(--matarix-secondary);
+    font-weight: 500;
+    min-width: 130px;
+}
+
+.info-value {
+    color: var(--matarix-primary);
+    font-weight: 600;
+    text-align: right;
+}
+
+.status-text {
+    color: var(--matarix-success);
+    font-weight: 700;
+}
+
+/* CUSTOMER DETAILS SECTION */
+.customer-details-section {
+    background-color: var(--matarix-light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--matarix-primary);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--matarix-red-light);
+    padding-bottom: 5px;
+}
+
+.customer-details-content {
+    background: var(--matarix-white);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.detail-item {
+    margin-bottom: 8px;
+}
+
+.detail-label {
+    color: var(--matarix-primary);
+    font-weight: 600;
+}
+
+.detail-value {
+    color: var(--matarix-secondary);
+    font-weight: 500;
+}
+
+/* ORDER ITEMS SECTION */
+.order-items-section {
+    margin-bottom: 30px;
+}
+
+.receipt-table {
+    margin: 0;
+    border: 1px solid var(--matarix-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.receipt-table thead th {
+    background-color: var(--matarix-secondary);
+    color: var(--matarix-white);
+    font-weight: 600;
+    border: none;
+    padding: 15px 12px;
+    font-size: 0.9rem;
+}
+
+.receipt-table tbody .receipt-item {
+    border-bottom: 1px solid var(--matarix-border);
+}
+
+.receipt-table tbody .receipt-item:last-child {
+    border-bottom: none;
