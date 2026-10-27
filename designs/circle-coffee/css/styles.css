@@ -823,11 +823,98 @@ label.card:focus-visible {
 
 .basket-empty { padding: 36px 24px; }
 
-body:has(.basket-card:target) .basket-empty { display: none; }
+.basket-card { display: grid; margin-top: 14px; }
 
-.basket-more { display: none; margin-top: 22px; }
+.basket-list { width: min(680px, 100%); margin: 0 auto; }
 
-body:has(.basket-card:target) .basket-more { display: flex; }
+.line-addons { font-size: 13px; }
+
+.line-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.line-qty button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.line-remove {
+  width: auto !important;
+  height: auto !important;
+  padding: 6px 10px;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--teal-deep) !important;
+}
+
+.basket-summary,
+.checkout-total {
+  width: min(680px, 100%);
+  margin: 18px auto 0;
+  text-align: center;
+}
+
+.checkout-total {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.checkout-total strong,
+.basket-summary strong { color: #e14b45; }
+
+.basket-more { display: flex; margin-top: 16px; }
+
+.checkout-form {
+  width: min(680px, 100%);
+  margin: 22px auto 0;
+  padding: 22px;
+  background: #fff;
+  border: 8px solid #1f8f88;
+  text-align: left;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #d45348;
+  font-size: 13px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #e4e0d8;
+  border-radius: 4px;
+  background: #f7f4ee;
+  font: inherit;
+  font-weight: 500;
+  color: #333;
+}
+
+.checkout-form textarea { height: 90px; padding-top: 10px; }
+
+.checkout-form .btn-coral { width: 100%; margin-top: 6px; }
+
+.addon-price { color: #e14b45; font-weight: 800; }
+
+#order-lines h2 {
+  text-align: center;
+  margin: 0 0 8px;
+}
 
 @media (max-width: 980px) {
   .grid { grid-template-columns: 1fr 1fr; }

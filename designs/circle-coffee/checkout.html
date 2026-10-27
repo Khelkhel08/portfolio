@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Circle Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f6f1e7'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%231c3f6b'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='28' fill='%23f27b66' font-family='Georgia'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="plain-body">
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="logo-badge logo-sm" aria-hidden="true"><span class="bean-row"><i></i><i class="mid"></i><i></i></span><span class="logo-script">Circle</span><span class="logo-word">Coffee</span></span><span class="brand-name">CIRCLE COFFEE</span></a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle">
+  <label class="nav-burger" for="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+  <nav class="site-nav">
+    <a href="login.html">LOG IN</a>
+    <a href="index.html">HOME</a>
+    <a href="menu.html">MENU</a>
+    <a href="reservations.html">TABLE RESERVATIONS</a>
+    <a href="basket.html" data-basket-count class="active" aria-current="page">BASKET</a>
+    <a href="index.html#about">ABOUT US</a>
+    <a href="index.html#contact" class="nav-cta">CONTACT US</a>
+  </nav>
+</header>
+<main class="wrap basket-wrap">
+  <h1 class="page-title">CHECK OUT</h1>
+  <section id="checkout-lines"></section>
+  <form class="checkout-form" id="checkout-form">
+    <label>NAME*<input name="name" required autocomplete="name"></label>
+    <label>PHONE*<input name="phone" type="tel" required autocomplete="tel"></label>
+    <label>NOTE<input name="note" placeholder="Pickup name or a request for the cafe"></label>
+    <button class="btn-coral" type="submit">PLACE ORDER</button>
+  </form>
+</main>
+<script src="js/cart.js"></script>
+</body>
+</html>

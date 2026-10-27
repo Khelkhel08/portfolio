@@ -18,8 +18,9 @@
   <nav class="site-nav">
     <a href="login.html">LOG IN</a>
     <a href="index.html">HOME</a>
-    <a href="menu.html" class="active" aria-current="page">MENU</a>
+    <a href="menu.html">MENU</a>
     <a href="reservations.html">TABLE RESERVATIONS</a>
+    <a href="basket.html" data-basket-count class="active" aria-current="page">BASKET</a>
     <a href="index.html#about">ABOUT US</a>
     <a href="index.html#contact" class="nav-cta">CONTACT US</a>
   </nav>
@@ -31,106 +32,15 @@
     <p>Your basket is empty.</p>
     <a class="btn-coral" href="menu.html">BROWSE THE MENU</a>
   </section>
-    <article class="basket-card" id="matcha-strawberry">
-      <img src="images/matcha-strawberry.jpg" alt="">
-      <div>
-        <h2>MATCHA STRAWBERRY</h2>
-        <p>Smooth, earthy matcha paired with sweet, ripe strawberries for a perfectly balanced treat.</p>
-        <p class="basket-price">₱170</p>
-      </div>
-    </article>
-    <article class="basket-card" id="matcha-mango">
-      <img src="images/matcha-mango.jpg" alt="">
-      <div>
-        <h2>MATCHA MANGO</h2>
-        <p>A creamy, cool matcha mixed with tropical mango for a bright, refreshing blend.</p>
-        <p class="basket-price">₱175</p>
-      </div>
-    </article>
-    <article class="basket-card" id="matcha-chocolate">
-      <img src="images/matcha-chocolate.jpg" alt="">
-      <div>
-        <h2>MATCHA CHOCOLATE</h2>
-        <p>Rich, nutty matcha blended with smooth chocolate for a cozy, indulgent cup.</p>
-        <p class="basket-price">₱170</p>
-      </div>
-    </article>
-    <article class="basket-card" id="ube-latte">
-      <img src="images/ube-latte.jpg" alt="">
-      <div>
-        <h2>UBE LATTE</h2>
-        <p>Creamy, sweet, and nutty ube blended with milk for a perfectly sweet lavender treat.</p>
-        <p class="basket-price">₱150</p>
-      </div>
-    </article>
-    <article class="basket-card" id="pandan-latte">
-      <img src="images/pandan-latte.jpg" alt="">
-      <div>
-        <h2>PANDAN LATTE</h2>
-        <p>Fragrant pandan blended with milk for a smooth, earthy, and aromatic delight.</p>
-        <p class="basket-price">₱150</p>
-      </div>
-    </article>
-    <article class="basket-card" id="coconut-latte">
-      <img src="images/coconut-latte.jpg" alt="">
-      <div>
-        <h2>COCONUT LATTE</h2>
-        <p>Velvety coconut milk blended into a smooth, lightly sweet tropical latte.</p>
-        <p class="basket-price">₱150</p>
-      </div>
-    </article>
-    <article class="basket-card" id="brewed-iced-tea">
-      <img src="images/brewed-iced-tea.jpg" alt="">
-      <div>
-        <h2>BREWED ICED TEA</h2>
-        <p>Freshly brewed tea, chilled over ice for a crisp and refreshing sip.</p>
-        <p class="basket-price">₱120</p>
-      </div>
-    </article>
-    <article class="basket-card" id="iced-chocolate">
-      <img src="images/iced-chocolate.jpg" alt="">
-      <div>
-        <h2>ICED CHOCOLATE</h2>
-        <p>A rich cocoa blend poured over ice for a cool, chocolatey finish.</p>
-        <p class="basket-price">₱140</p>
-      </div>
-    </article>
-    <article class="basket-card" id="hot-chocolate">
-      <img src="images/hot-chocolate.jpg" alt="">
-      <div>
-        <h2>HOT CHOCOLATE</h2>
-        <p>Warm, velvety cocoa steamed until silky, sweet, and cozy.</p>
-        <p class="basket-price">₱130</p>
-      </div>
-    </article>
-    <article class="basket-card" id="cappuccino">
-      <img src="images/cappuccino.jpg" alt="">
-      <div>
-        <h2>CAPPUCCINO</h2>
-        <p>Espresso lifted with steamed milk and a soft cap of foam.</p>
-        <p class="basket-price">₱130</p>
-      </div>
-    </article>
-    <article class="basket-card" id="mocha">
-      <img src="images/mocha.jpg" alt="">
-      <div>
-        <h2>MOCHA</h2>
-        <p>Espresso and chocolate folded into milk for a sweet cafe classic.</p>
-        <p class="basket-price">₱170</p>
-      </div>
-    </article>
-    <article class="basket-card" id="spanish-latte">
-      <img src="images/spanish-latte.jpg" alt="">
-      <div>
-        <h2>SPANISH LATTE</h2>
-        <p>Espresso sweetened with condensed milk for a smooth, creamy cup.</p>
-        <p class="basket-price">₱170</p>
-      </div>
-    </article>
-  <div class="basket-more">
-    <a class="btn-coral" href="menu.html">BACK TO MENU</a>
-    <a class="text-link" href="index.html">Back to home</a>
-  </div>
+  <section class="basket-list" id="basket-list"></section>
+  <section class="basket-summary" id="basket-summary" hidden>
+    <p class="checkout-total">Total <strong id="basket-sum">₱0</strong></p>
+    <div class="basket-more">
+      <a class="btn-coral" href="checkout.html">CHECK OUT</a>
+      <a class="text-link" href="menu.html">Add more drinks</a>
+    </div>
+  </section>
 </main>
+<script src="js/cart.js"></script>
 </body>
 </html>
