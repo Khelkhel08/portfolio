@@ -2,67 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume — Maria Khelly C. David</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Maria Khelly C. David — IT Intern</title>
   <style>
-    body { margin: 0; background: #ecefca; color: #213448; font-family: Manrope, sans-serif; }
-    main { max-width: 800px; margin: 0 auto; background: white; padding: 2.2rem 2rem 3rem; }
-    a { color: #213448; }
-    h1 { margin: 0; font-size: 1.8rem; }
-    h2 { font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 2px solid #213448; padding-bottom: 0.2rem; margin: 1.3rem 0 0.5rem; }
-    .top p { margin: 0.2rem 0; }
-    ul { margin: 0.2rem 0 0.6rem; padding-left: 1.1rem; }
-    .back { display: inline-block; margin-bottom: 1rem; }
+    @page { size: A4; margin: 0.48in 0.58in; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.28; }
+    main { max-width: 8.1in; margin: 0 auto; padding: 0.4in 0.2in 0.6in; }
+    a { color: #000; text-decoration: none; }
+    h1 { font-size: 16.5pt; margin: 0; text-align: center; letter-spacing: 0.04em; }
+    .target { text-align: center; font-weight: 700; margin: 2px 0 4px; font-size: 11pt; }
+    .contact { text-align: center; margin: 0; }
+    h2 { font-size: 11pt; margin: 8px 0 2px; padding-bottom: 1px; border-bottom: 1.5px solid #000; text-transform: uppercase; letter-spacing: 0.04em; }
+    p { margin: 0 0 4px; }
+    ul { margin: 1px 0 4px; padding-left: 1.15rem; }
+    li { margin: 0 0 1px; }
+    .role { font-weight: 700; }
+    .back, .print { margin: 0 0 12px; font-size: 10pt; }
+    .print button { font: inherit; }
     @media print {
-      body { background: white; }
-      .back { display: none; }
-      main { padding: 0; }
+      main { max-width: none; padding: 0; }
+      .back, .print { display: none; }
+      a { color: #000; }
     }
   </style>
 </head>
 <body>
   <main>
-    <a class="back" href="index.html">Back to portfolio</a>
-    <header class="top">
-      <h1>Maria Khelly C. David</h1>
-      <p>Information Technology</p>
-      <p>Quezon City, Philippines · 0968 773 7494 · <a href="mailto:mariakhellydavid@gmail.com">mariakhellydavid@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/maria-khelly-c-david-a300b6375">LinkedIn</a> · <a href="https://khelkhel08.github.io/portfolio/">khelkhel08.github.io/portfolio</a></p>
-    </header>
-    <h2>Professional summary</h2>
-    <p>Fourth-year Bachelor of Science in Information Technology student at National University Fairview, specializing in Mobile and Internet Technology, with an expected graduation in 2027. Completed client-based academic projects involving websites, mobile applications, databases, user interfaces, testing, and record keeping. Proficient in Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Google Docs, Google Slides, and Google Sheets.</p>
-    <h2>Technical skills</h2>
+    <p class="back"><a href="index.html">Back to portfolio</a></p>
+    <h1>MARIA KHELLY C. DAVID</h1>
+    <p class="target">Information Technology Intern</p>
+    <p class="contact">Quezon City, Philippines | 0968 773 7494 | mariakhellydavid@gmail.com</p>
+    <p class="contact">LinkedIn: https://www.linkedin.com/in/maria-khelly-c-david-a300b6375</p>
+    <p class="contact">Portfolio: https://khelkhel08.github.io/portfolio/ | GitHub: https://github.com/Khelkhel08</p>
+
+    <h2>Professional Summary</h2>
+    <p>Fourth-year Bachelor of Science in Information Technology student at National University – Fairview, specializing in Mobile and Internet Technology, with an expected graduation in 2027. Academic experience covers web applications, mobile applications, databases, user interfaces, system checks, and user guides for client and class projects. Used to gathering requirements, building features, and keeping records consistent. Seeking an Information Technology internship in application development, systems support, documentation, and day-to-day IT work.</p>
+
+    <h2>Technical Skills</h2>
     <ul>
-      <li>Microsoft Office: Word, PowerPoint, Excel (PivotTables, charts, SUM, AVERAGE, IF, data validation, data cleaning)</li>
-      <li>Google Workspace: Docs, Slides, Sheets</li>
-      <li>Development: web applications, Flutter, user interface design, Figma, hosted systems</li>
-      <li>Databases: SQL (SELECT, WHERE, JOIN, GROUP BY), MySQL, Firebase</li>
-      <li>Systems: IoT sensors, ESP32, automated alerts, record organization</li>
-      <li>Testing: manual testing, consistency checks, system guides</li>
+      <li>Information Technology: requirements gathering, technical documentation, troubleshooting, client coordination, user guides</li>
+      <li>Web and Mobile Applications: web development, Flutter, Firebase, hosted systems</li>
+      <li>Databases: MySQL, SQL (SELECT, WHERE, JOIN, GROUP BY), Firebase, record organization</li>
+      <li>User Interface: Figma, wireframing, interface design, prototyping</li>
+      <li>Systems: ESP32, IoT sensors, monitoring, alerts</li>
+      <li>Software Testing: manual testing, functional checks, validation against expected results</li>
+      <li>Productivity Tools: Microsoft Word, PowerPoint, Excel (PivotTables, charts, SUM, AVERAGE, IF, data validation, data cleaning); Google Docs, Slides, Sheets</li>
     </ul>
-    <h2>Academic projects</h2>
-    <p><strong>Matarix: Web-Based Ordering and Delivery System</strong><br>Client: Matarik Construction Supply · Firebase, Hostinger, Figma</p>
+
+    <h2>Academic Projects</h2>
+    <p><span class="role">IncuVue: A Solar-Powered Smart Chicken Egg Incubator with Hatch Camera Monitoring</span><br>Client: Organikong Filipino Farm | Flutter, Firebase, ESP32, IoT sensors<br>Website: https://organikongfilipino.matarix.store/Incuvue/php/landing.php</p>
     <ul>
-      <li>Developed the website and user interface for ordering, monitoring, and delivery tracking.</li>
+      <li>Developed mobile application screens for batch monitoring, camera results, and batch history.</li>
+      <li>Connected temperature, humidity, tray turning, and alerts with the incubator hardware.</li>
+      <li>Prepared user guides and checked application behavior against the expected results with the project team and client.</li>
+    </ul>
+    <p><span class="role">Matarix: Web-Based Ordering System with Delivery Tracking</span><br>Client: Matarik Construction Supply | Web development, Firebase, Hostinger, Figma<br>Website: https://matarix.store</p>
+    <ul>
+      <li>Built the website and interface for ordering, delivery status, and staff records.</li>
       <li>Organized customer, order, and transaction records and checked them for consistent values.</li>
+      <li>Worked with the project team and client to confirm requirements and expected system behavior.</li>
     </ul>
-    <p><strong>IncuVue: Smart Incubator Mobile System</strong><br>Client: Organikong Filipino Farm · Flutter, Firebase, Roboflow, IoT sensors<br>Website: https://organikongfilipino.matarix.store/Incuvue/php/landing.php</p>
+    <p><span class="role">Circle Coffee: Online Ordering and Table Reservation System</span><br>Client: Circle Coffee | MySQL, SQL, interface design<br>Website: https://khelkhel08.github.io/portfolio/designs/circle-coffee/</p>
     <ul>
-      <li>Developed the mobile application for monitoring, camera results, and batch history.</li>
-      <li>Prepared user guides and added alerts when temperature or humidity moved out of range.</li>
+      <li>Contributed to the ordering and reservation interface.</li>
+      <li>Wrote SQL queries for menu and reservation records.</li>
     </ul>
-    <p><strong>AquaGrow: Smart Plant Monitoring System</strong><br>Mobile application, database, IoT sensors</p>
-    <ul><li>Organized plant and sensor records and tested system responses against expected results.</li></ul>
-    <p><strong>Circle Coffee: Online Ordering and Reservation System</strong><br>Client: Circle Coffee · MySQL, SQL, user interface design<br>Website: https://khelkhel08.github.io/portfolio/designs/circle-coffee/</p>
-    <ul><li>Wrote SQL queries for menu and reservation records and contributed to the ordering interface.</li></ul>
-    <p><strong>Kuwiz: Quiz Application</strong><br>Mobile application, user interface design</p>
-    <ul><li>Tested timer results and quiz scores against expected outcomes.</li></ul>
+    <p><span class="role">AquaGrow: Mobile-Based Smart Plant Watering System</span><br>Mobile application, database, IoT sensors</p>
+    <ul>
+      <li>Organized plant and sensor records for a home watering system.</li>
+      <li>Tested system responses against the results the application was expected to show.</li>
+    </ul>
+    <p><span class="role">Kuwiz: Customizable Pomodoro-Style Quiz Application</span><br>Mobile application, interface design</p>
+    <ul>
+      <li>Contributed to the quiz interface, including the timer, questions, and score.</li>
+      <li>Tested timer results and scores against the expected outcomes.</li>
+    </ul>
+
     <h2>Education</h2>
-    <p><strong>National University – Fairview</strong><br>Bachelor of Science in Information Technology<br>Specialization: Mobile and Internet Technology<br>Quezon City, Philippines · Expected graduation: 2027</p>
+    <p><span class="role">National University – Fairview</span><br>Bachelor of Science in Information Technology<br>Specialization: Mobile and Internet Technology (BSIT-MI)<br>Quezon City, Philippines | Expected Graduation: 2027</p>
+
     <h2>Certifications</h2>
-    <p>Excel Essential Training (Microsoft 365, 2022); Programming Foundations: Software Testing/QA; Software Design: Developing Effective Requirements; Microsoft Azure: Security Concepts; Planning a Microsoft Azure Solution. LinkedIn Learning.</p>
-    <p><button onclick="window.print()">Print or save as PDF</button></p>
+    <ul>
+      <li>Software Design: Developing Effective Requirements — LinkedIn Learning</li>
+      <li>Programming Foundations: Software Testing/QA — LinkedIn Learning</li>
+      <li>Microsoft Azure: Security Concepts — LinkedIn Learning</li>
+      <li>Planning a Microsoft Azure Solution — LinkedIn Learning</li>
+      <li>Excel Essential Training (Microsoft 365), 2022 — LinkedIn Learning</li>
+    </ul>
+    <p class="print"><button type="button" onclick="window.print()">Print or save as PDF</button></p>
   </main>
 </body>
 </html>
