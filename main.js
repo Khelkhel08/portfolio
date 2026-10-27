@@ -52,7 +52,6 @@ const steps = [
     text: "Stopping the batch turns the relays off. Type CANCEL so it does not happen by accident. Keep running leaves the hatch going."
   }
 ];
-let stepIndex = 0;
 
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
@@ -101,37 +100,79 @@ document.querySelectorAll("[data-slide]").forEach((link) => {
   });
 });
 
-const shot = document.querySelector("#shot");
-const stepTitle = document.querySelector("#step-title");
-const stepText = document.querySelector("#step-text");
-const stepCount = document.querySelector("#step-count");
-const stepList = document.querySelector("#step-list");
+const aquaSteps = [
+  {
+    src: "screens/aquagrow/01-login.png",
+    title: "Login",
+    text: "This is the front door. You sign in with email and password. The greeting says the plants missed you."
+  },
+  {
+    src: "screens/aquagrow/02-home.png",
+    title: "Home",
+    text: "The garden overview. Sparkz has 3 plants, and 2 could use a drink. Mochi is at 46% water and Pip is at 28%. Garden health shows water, sunshine, and love across the plants."
+  },
+  {
+    src: "screens/aquagrow/03-plants.png",
+    title: "My plants",
+    text: "Mochi the pothos, Sage the snake plant, and Pip the succulent. The red badge means that plant needs attention. Add new starts another plant."
+  },
+  {
+    src: "screens/aquagrow/04-water.png",
+    title: "Water",
+    text: "A list of who needs a drink. Mochi and Pip are thirsty. Sage the snake plant is happy at 72% water."
+  },
+  {
+    src: "screens/aquagrow/05-status.png",
+    title: "Plant status",
+    text: "Pip the succulent is open. The plant says it is feeling parched. Water is 28%, sunshine is 91%, and love is 61%. Look After Pip is the care button."
+  },
+  {
+    src: "screens/aquagrow/06-happy.png",
+    title: "After care",
+    text: "After a drink and a little sun, Pip perks up. The screen says Pip is happy and lives to see another day."
+  },
+  {
+    src: "screens/aquagrow/07-add.png",
+    title: "Add a plant",
+    text: "Pick a picture, give the plant a name, and choose the species. Bill is a snake plant, watered every 5 days, with a sunshine need of 70%. Add to garden saves it."
+  }
+];
 
-function showStep(index) {
-  stepIndex = (index + steps.length) % steps.length;
-  const step = steps[stepIndex];
-  shot.src = step.src;
-  shot.alt = step.title;
-  stepTitle.textContent = step.title;
-  stepText.textContent = step.text;
-  stepCount.textContent = `${stepIndex + 1} of ${steps.length}`;
-  stepList.querySelectorAll("button").forEach((button, i) => {
-    button.classList.toggle("is-on", i === stepIndex);
+function bindWalk(root, walkSteps) {
+  const shot = root.querySelector(".shot");
+  const title = root.querySelector(".title");
+  const text = root.querySelector(".text");
+  const count = root.querySelector(".count");
+  const list = root.querySelector(".step-list");
+  let index = 0;
+  function show(next) {
+    index = (next + walkSteps.length) % walkSteps.length;
+    const step = walkSteps[index];
+    shot.src = step.src;
+    shot.alt = step.title;
+    title.textContent = step.title;
+    text.textContent = step.text;
+    count.textContent = `${index + 1} of ${walkSteps.length}`;
+    list.querySelectorAll("button").forEach((button, i) => {
+      button.classList.toggle("is-on", i === index);
+    });
+  }
+  walkSteps.forEach((step, i) => {
+    const item = document.createElement("li");
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = step.title;
+    button.addEventListener("click", () => show(i));
+    item.appendChild(button);
+    list.appendChild(item);
   });
+  show(0);
+  root.querySelector(".next").addEventListener("click", () => show(index + 1));
+  root.querySelector(".prev").addEventListener("click", () => show(index - 1));
 }
 
-steps.forEach((step, index) => {
-  const item = document.createElement("li");
-  const button = document.createElement("button");
-  button.type = "button";
-  button.textContent = step.title;
-  button.addEventListener("click", () => showStep(index));
-  item.appendChild(button);
-  stepList.appendChild(item);
-});
-showStep(0);
-document.querySelector("#next").addEventListener("click", () => showStep(stepIndex + 1));
-document.querySelector("#prev").addEventListener("click", () => showStep(stepIndex - 1));
+bindWalk(document.querySelector("#incuvue-walk"), steps);
+bindWalk(document.querySelector("#aquagrow-walk"), aquaSteps);
 
 const sections = [...document.querySelectorAll("main section[id]")];
 const onScroll = () => {
