@@ -140,6 +140,7 @@ p { margin: 0 0 0.9rem; }
   font-weight: 700;
   background: rgba(7, 9, 12, 0.45);
 }
+.socials svg { display: block; }
 
 .section { padding: 4.5rem 6vw; }
 .kicker {
