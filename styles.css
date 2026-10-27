@@ -178,6 +178,23 @@ p { margin: 0 0 0.9rem; }
 .facts dt { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
 .facts dd { margin: 0.1rem 0 0; }
 .facts a { color: var(--text); }
+.know { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.4rem; }
+.know li {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.92rem;
+}
+.know strong {
+  display: block;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pop);
+}
+.know span { color: var(--muted); }
 
 .services, .works {
   display: grid;
@@ -194,6 +211,15 @@ p { margin: 0 0 0.9rem; }
 .services h3, .work h3 { font-size: 1.15rem; }
 .services p, .work p { color: var(--muted); font-size: 0.95rem; }
 .tag { color: #94b4c1; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.45rem; }
+.tag .client {
+  display: inline-block;
+  background: var(--pop);
+  color: var(--pop-text);
+  border-radius: 999px;
+  padding: 0.08rem 0.45rem;
+  margin-right: 0.35rem;
+  letter-spacing: 0.08em;
+}
 .meta { font-size: 0.85rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.4rem; }
 .works .work:nth-child(4), .works .work:nth-child(5) { }
@@ -265,7 +291,8 @@ p { margin: 0 0 0.9rem; }
 }
 .bars { list-style: none; margin: 0; padding: 0; }
 .bars li { margin-bottom: 0.95rem; }
-.bars span { display: block; margin-bottom: 0.35rem; font-weight: 600; }
+.bars span { display: block; margin-bottom: 0.15rem; font-weight: 600; }
+.bars small { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
 .bars i { display: block; height: 3px; background: var(--line); position: relative; }
 .bars i::before {
   content: "";
