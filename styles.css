@@ -251,6 +251,8 @@ p { margin: 0 0 0.9rem; }
 .slide.is-on { display: block; }
 .slide h2, .slide > p { text-align: left; }
 .slide .actions { justify-content: flex-start; }
+.app-slide { display: none; }
+.app-slide.is-on { display: block; }
 .story { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1rem 0; }
 .story article { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; }
 .story p { color: var(--muted); }
@@ -312,8 +314,8 @@ p { margin: 0 0 0.9rem; }
   .about-grid, .services, .works, .walk, .story, .skills, .slider { grid-template-columns: 1fr; }
   .slider { position: relative; padding-top: 3.2rem; }
   .slider-arrow { position: absolute; top: 0; width: 44px; height: 44px; }
-  #proj-prev { left: 0; }
-  #proj-next { right: 0; }
+  #proj-prev, #app-prev { left: 0; }
+  #proj-next, #app-next { right: 0; }
   .portrait, .device { max-width: 320px; }
   .works { grid-template-columns: 1fr; }
 }

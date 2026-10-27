@@ -110,6 +110,7 @@
           <p class="meta">Flutter · Firebase · Roboflow · IoT</p>
           <div class="actions">
             <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
+            <a class="btn btn-ghost" href="#screens" data-open-app="incuvue">App screens</a>
             <a class="btn btn-ghost" href="#projects" data-slide="incuvue">Read the project</a>
           </div>
         </article>
@@ -119,7 +120,7 @@
           <p>A mobile smart watering system. Soil moisture sensors water the plant, and the app shows the reading.</p>
           <p class="meta">PEMBEDS · April 2025 · Android · IoT</p>
           <div class="actions">
-            <a class="btn" href="#aquagrow">App screens</a>
+            <a class="btn" href="#screens" data-open-app="aquagrow">App screens</a>
             <a class="btn btn-ghost" href="#projects" data-slide="aquagrow">Read the project</a>
           </div>
         </article>
@@ -145,48 +146,55 @@
       </div>
     </section>
 
-    <section class="section studio" id="incuvue">
-      <p class="kicker">IncuVue, in order</p>
-      <h2>What each screen does</h2>
-      <div class="walk" id="incuvue-walk">
-        <figure class="device">
-          <img class="shot" src="screens/01-start.jpg" alt="IncuVue start screen">
-        </figure>
-        <div>
-          <p class="step count">1 of 10</p>
-          <h3 class="title">Start incubation</h3>
-          <p class="text"></p>
-          <div class="actions">
-            <button class="btn btn-ghost prev" type="button">Previous</button>
-            <button class="btn next" type="button">Next</button>
-          </div>
-          <ol class="step-list"></ol>
-          <div class="actions">
-            <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
-            <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">GitHub · Incuvue</a>
-            <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
-          </div>
+    <section class="section studio" id="screens">
+      <div class="slider">
+        <button class="slider-arrow" type="button" id="app-prev" aria-label="Previous app">‹</button>
+        <div class="app-slides">
+          <article class="app-slide is-on" data-app="incuvue">
+            <p class="kicker">IncuVue</p>
+            <h2>What each screen does</h2>
+            <div class="walk" id="incuvue-walk">
+              <figure class="device">
+                <img class="shot" src="screens/01-start.jpg" alt="IncuVue start screen">
+              </figure>
+              <div>
+                <p class="step count">1 of 10</p>
+                <h3 class="title">Start incubation</h3>
+                <p class="text"></p>
+                <div class="actions">
+                  <button class="btn btn-ghost prev" type="button">Previous</button>
+                  <button class="btn next" type="button">Next</button>
+                </div>
+                <ol class="step-list"></ol>
+                <div class="actions">
+                  <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
+                  <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue" target="_blank" rel="noopener noreferrer">GitHub · Incuvue</a>
+                  <a class="btn btn-ghost" href="https://github.com/Khelkhel08/Incuvue_sparkz" target="_blank" rel="noopener noreferrer">Incuvue Sparkz</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="app-slide" data-app="aquagrow">
+            <p class="kicker">AquaGrow</p>
+            <h2>What each screen does</h2>
+            <div class="walk" id="aquagrow-walk">
+              <figure class="device">
+                <img class="shot" src="screens/aquagrow/01-login.png" alt="AquaGrow login">
+              </figure>
+              <div>
+                <p class="step count">1 of 7</p>
+                <h3 class="title">Login</h3>
+                <p class="text"></p>
+                <div class="actions">
+                  <button class="btn btn-ghost prev" type="button">Previous</button>
+                  <button class="btn next" type="button">Next</button>
+                </div>
+                <ol class="step-list"></ol>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section studio" id="aquagrow">
-      <p class="kicker">AquaGrow, in order</p>
-      <h2>What each screen does</h2>
-      <div class="walk" id="aquagrow-walk">
-        <figure class="device">
-          <img class="shot" src="screens/aquagrow/01-login.png" alt="AquaGrow login">
-        </figure>
-        <div>
-          <p class="step count">1 of 7</p>
-          <h3 class="title">Login</h3>
-          <p class="text"></p>
-          <div class="actions">
-            <button class="btn btn-ghost prev" type="button">Previous</button>
-            <button class="btn next" type="button">Next</button>
-          </div>
-          <ol class="step-list"></ol>
-        </div>
+        <button class="slider-arrow" type="button" id="app-next" aria-label="Next app">›</button>
       </div>
     </section>
 
@@ -246,7 +254,7 @@
             </div>
             <div class="actions">
               <a class="btn" href="https://organikongfilipino.matarix.store/Incuvue/php/landing.php" target="_blank" rel="noopener noreferrer">Website</a>
-              <a class="btn btn-ghost" href="#incuvue">App screens</a>
+              <a class="btn btn-ghost" href="#screens" data-open-app="incuvue">App screens</a>
             </div>
           </article>
           <article class="slide" data-project="aquagrow">
@@ -274,7 +282,7 @@
             </div>
             <p>On this project I organized the plant and sensor records and tested the system against the results it was expected to give. There is no public website for AquaGrow. The app screens are on this page.</p>
             <div class="actions">
-              <a class="btn" href="#aquagrow">App screens</a>
+              <a class="btn" href="#screens" data-open-app="aquagrow">App screens</a>
             </div>
           </article>
           <article class="slide" data-project="coffee">

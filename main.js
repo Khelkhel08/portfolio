@@ -171,6 +171,24 @@ function bindWalk(root, walkSteps) {
   root.querySelector(".prev").addEventListener("click", () => show(index - 1));
 }
 
+const appSlides = [...document.querySelectorAll(".app-slide")];
+let appIndex = 0;
+
+function showApp(index) {
+  if (!appSlides.length) return;
+  appIndex = (index + appSlides.length) % appSlides.length;
+  appSlides.forEach((slide, i) => slide.classList.toggle("is-on", i === appIndex));
+}
+
+document.querySelector("#app-next").addEventListener("click", () => showApp(appIndex + 1));
+document.querySelector("#app-prev").addEventListener("click", () => showApp(appIndex - 1));
+document.querySelectorAll("[data-open-app]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const index = appSlides.findIndex((slide) => slide.dataset.app === link.dataset.openApp);
+    if (index >= 0) showApp(index);
+  });
+});
+
 bindWalk(document.querySelector("#incuvue-walk"), steps);
 bindWalk(document.querySelector("#aquagrow-walk"), aquaSteps);
 
