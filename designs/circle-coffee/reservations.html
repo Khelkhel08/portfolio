@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a table · Circle Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f6f1e7'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%231c3f6b'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='28' fill='%23f27b66' font-family='Georgia'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="reserve-body">
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="logo-badge logo-sm" aria-hidden="true"><span class="bean-row"><i></i><i class="mid"></i><i></i></span><span class="logo-script">Circle</span><span class="logo-word">Coffee</span></span><span class="brand-name">CIRCLE COFFEE</span></a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle">
+  <label class="nav-burger" for="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+  <nav class="site-nav">
+    <a href="login.html">LOG IN</a>
+    <a href="index.html">HOME</a>
+    <a href="menu.html">MENU</a>
+    <a href="reservations.html" class="active" aria-current="page">TABLE RESERVATIONS</a>
+    <a href="index.html#about">ABOUT US</a>
+    <a href="index.html#contact" class="nav-cta">CONTACT US</a>
+  </nav>
+</header>
+
+<main class="reserve-wrap">
+  <form class="reserve-card" action="booked.html" method="get">
+    <div>
+      <h1 class="reserve-title">RESERVE YOUR TABLE</h1>
+      <div class="form-grid">
+        <div class="f-field">
+          <label for="date">DATE*</label>
+          <input id="date" type="date" required>
+        </div>
+        <div class="f-field">
+          <label for="time">TIME*</label>
+          <select id="time" required>
+            <option value="" selected>Select time</option>
+              <option>8:00 AM</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+          </select>
+        </div>
+        <div class="f-field span-2">
+          <label for="people">PEOPLE*</label>
+          <select id="people" required>
+            <option value="" selected>Select people</option>
+              <option>1 person</option>
+              <option>2 people</option>
+              <option>3 people</option>
+              <option>4 people</option>
+              <option>5 people</option>
+              <option>6 people</option>
+              <option>7 people</option>
+              <option>8 people</option>
+          </select>
+        </div>
+        <div class="f-field">
+          <label for="first">FIRST NAME*</label>
+          <input id="first" type="text" autocomplete="given-name" required>
+        </div>
+        <div class="f-field">
+          <label for="last">LAST NAME*</label>
+          <input id="last" type="text" autocomplete="family-name" required>
+        </div>
+        <div class="f-field span-2">
+          <label for="note">NOTE TO CAFE*</label>
+          <textarea id="note" placeholder="Add your request (subject to cafe's discretion)" required></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="reserve-photos">
+      <img src="images/cafe-seats.jpg" alt="Cafe seating">
+      <img src="images/cafe-indoor.jpg" alt="Tables inside the cafe">
+    </div>
+    <button class="btn-coral reserve-submit" type="submit">BOOK A TABLE</button>
+  </form>
+</main>
+</body>
+</html>

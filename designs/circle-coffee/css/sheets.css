@@ -1,0 +1,12 @@
+#sheet-matcha-strawberry:checked ~ .sheet-layer .panel-matcha-strawberry { display: block; }
+#sheet-matcha-mango:checked ~ .sheet-layer .panel-matcha-mango { display: block; }
+#sheet-matcha-chocolate:checked ~ .sheet-layer .panel-matcha-chocolate { display: block; }
+#sheet-ube-latte:checked ~ .sheet-layer .panel-ube-latte { display: block; }
+#sheet-pandan-latte:checked ~ .sheet-layer .panel-pandan-latte { display: block; }
+#sheet-coconut-latte:checked ~ .sheet-layer .panel-coconut-latte { display: block; }
+#sheet-brewed-iced-tea:checked ~ .sheet-layer .panel-brewed-iced-tea { display: block; }
+#sheet-iced-chocolate:checked ~ .sheet-layer .panel-iced-chocolate { display: block; }
+#sheet-hot-chocolate:checked ~ .sheet-layer .panel-hot-chocolate { display: block; }
+#sheet-cappuccino:checked ~ .sheet-layer .panel-cappuccino { display: block; }
+#sheet-mocha:checked ~ .sheet-layer .panel-mocha { display: block; }
+#sheet-spanish-latte:checked ~ .sheet-layer .panel-spanish-latte { display: block; }

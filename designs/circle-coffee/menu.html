@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu · Circle Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/sheets.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f6f1e7'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%231c3f6b'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='28' fill='%23f27b66' font-family='Georgia'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="menu-body">
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="logo-badge logo-sm" aria-hidden="true"><span class="bean-row"><i></i><i class="mid"></i><i></i></span><span class="logo-script">Circle</span><span class="logo-word">Coffee</span></span><span class="brand-name">CIRCLE COFFEE</span></a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle">
+  <label class="nav-burger" for="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
+  <nav class="site-nav">
+    <a href="login.html">LOG IN</a>
+    <a href="index.html">HOME</a>
+    <a href="menu.html" class="active" aria-current="page">MENU</a>
+    <a href="reservations.html">TABLE RESERVATIONS</a>
+    <a href="index.html#about">ABOUT US</a>
+    <a href="index.html#contact" class="nav-cta">CONTACT US</a>
+  </nav>
+</header>
+<div class="menu-app">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-none" checked aria-label="Close drink details">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-matcha-strawberry">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-matcha-mango">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-matcha-chocolate">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-ube-latte">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-pandan-latte">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-coconut-latte">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-brewed-iced-tea">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-iced-chocolate">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-hot-chocolate">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-cappuccino">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-mocha">
+  <input class="sheet-radio" type="radio" name="sheet" id="sheet-spanish-latte">
+  <main class="wrap">
+    <h1 class="page-title">MENU</h1>
+    <section class="category">
+      <h2 class="cat">MATCHA</h2>
+      <div class="grid">
+        <label class="card" for="sheet-matcha-strawberry">
+          <img src="images/matcha-strawberry.jpg" alt="Matcha Strawberry">
+          <span class="card-body">
+            <h3>MATCHA STRAWBERRY</h3>
+            <p>Smooth, earthy matcha paired with sweet, ripe strawberries for a perfectly balanced treat.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱170</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-matcha-mango">
+          <img src="images/matcha-mango.jpg" alt="Matcha Mango">
+          <span class="card-body">
+            <h3>MATCHA MANGO</h3>
+            <p>A creamy, cool matcha mixed with tropical mango for a bright, refreshing blend.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱175</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-matcha-chocolate">
+          <img src="images/matcha-chocolate.jpg" alt="Matcha Chocolate">
+          <span class="card-body">
+            <h3>MATCHA CHOCOLATE</h3>
+            <p>Rich, nutty matcha blended with smooth chocolate for a cozy, indulgent cup.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱170</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+      </div>
+    </section>
+    <section class="category">
+      <h2 class="cat">LATTE</h2>
+      <div class="grid">
+        <label class="card" for="sheet-ube-latte">
+          <img src="images/ube-latte.jpg" alt="Ube Latte">
+          <span class="card-body">
+            <h3>UBE LATTE</h3>
+            <p>Creamy, sweet, and nutty ube blended with milk for a perfectly sweet lavender treat.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱150</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-pandan-latte">
+          <img src="images/pandan-latte.jpg" alt="Pandan Latte">
+          <span class="card-body">
+            <h3>PANDAN LATTE</h3>
+            <p>Fragrant pandan blended with milk for a smooth, earthy, and aromatic delight.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱150</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-coconut-latte">
+          <img src="images/coconut-latte.jpg" alt="Coconut Latte">
+          <span class="card-body">
+            <h3>COCONUT LATTE</h3>
+            <p>Velvety coconut milk blended into a smooth, lightly sweet tropical latte.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱150</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+      </div>
+    </section>
+    <section class="category">
+      <h2 class="cat">NON-COFFEE</h2>
+      <div class="grid">
+        <label class="card" for="sheet-brewed-iced-tea">
+          <img src="images/brewed-iced-tea.jpg" alt="Brewed Iced Tea">
+          <span class="card-body">
+            <h3>BREWED ICED TEA</h3>
+            <p>Freshly brewed tea, chilled over ice for a crisp and refreshing sip.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱120</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-iced-chocolate">
+          <img src="images/iced-chocolate.jpg" alt="Iced Chocolate">
+          <span class="card-body">
+            <h3>ICED CHOCOLATE</h3>
+            <p>A rich cocoa blend poured over ice for a cool, chocolatey finish.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱140</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-hot-chocolate">
+          <img src="images/hot-chocolate.jpg" alt="Hot Chocolate">
+          <span class="card-body">
+            <h3>HOT CHOCOLATE</h3>
+            <p>Warm, velvety cocoa steamed until silky, sweet, and cozy.</p>
+            <span class="price-row"><span class="temp">HOT</span><span class="price">₱130</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+      </div>
+    </section>
+    <section class="category">
+      <h2 class="cat">CLASSICS</h2>
+      <div class="grid">
+        <label class="card" for="sheet-cappuccino">
+          <img src="images/cappuccino.jpg" alt="Cappuccino">
+          <span class="card-body">
+            <h3>CAPPUCCINO</h3>
+            <p>Espresso lifted with steamed milk and a soft cap of foam.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱130</span><span class="temp">HOT</span><span class="price">₱120</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-mocha">
+          <img src="images/mocha.jpg" alt="Mocha">
+          <span class="card-body">
+            <h3>MOCHA</h3>
+            <p>Espresso and chocolate folded into milk for a sweet cafe classic.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱170</span><span class="temp">HOT</span><span class="price">₱150</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+        <label class="card" for="sheet-spanish-latte">
+          <img src="images/spanish-latte.jpg" alt="Spanish Latte">
+          <span class="card-body">
+            <h3>SPANISH LATTE</h3>
+            <p>Espresso sweetened with condensed milk for a smooth, creamy cup.</p>
+            <span class="price-row"><span class="temp">ICED</span><span class="price">₱170</span><span class="temp">HOT</span><span class="price">₱150</span><span class="plus" aria-hidden="true">+</span></span>
+          </span>
+        </label>
+      </div>
+    </section>
+  </main>
+  <div class="sheet-layer">
+    <label class="sheet-backdrop" for="sheet-none" aria-label="Close drink"></label>
+      <article class="sheet-panel panel-matcha-strawberry">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>MATCHA STRAWBERRY</h2>
+            <span class="sheet-price">₱170</span>
+          </div>
+          <p class="sheet-desc">Smooth, earthy matcha paired with sweet, ripe strawberries for a perfectly balanced treat.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#matcha-strawberry">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-matcha-mango">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>MATCHA MANGO</h2>
+            <span class="sheet-price">₱175</span>
+          </div>
+          <p class="sheet-desc">A creamy, cool matcha mixed with tropical mango for a bright, refreshing blend.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#matcha-mango">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-matcha-chocolate">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>MATCHA CHOCOLATE</h2>
+            <span class="sheet-price">₱170</span>
+          </div>
+          <p class="sheet-desc">Rich, nutty matcha blended with smooth chocolate for a cozy, indulgent cup.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#matcha-chocolate">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-ube-latte">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>UBE LATTE</h2>
+            <span class="sheet-price">₱150</span>
+          </div>
+          <p class="sheet-desc">Creamy, sweet, and nutty ube blended with milk for a perfectly sweet lavender treat.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#ube-latte">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-pandan-latte">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>PANDAN LATTE</h2>
+            <span class="sheet-price">₱150</span>
+          </div>
+          <p class="sheet-desc">Fragrant pandan blended with milk for a smooth, earthy, and aromatic delight.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#pandan-latte">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-coconut-latte">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>COCONUT LATTE</h2>
+            <span class="sheet-price">₱150</span>
+          </div>
+          <p class="sheet-desc">Velvety coconut milk blended into a smooth, lightly sweet tropical latte.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#coconut-latte">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-brewed-iced-tea">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>BREWED ICED TEA</h2>
+            <span class="sheet-price">₱120</span>
+          </div>
+          <p class="sheet-desc">Freshly brewed tea, chilled over ice for a crisp and refreshing sip.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#brewed-iced-tea">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-iced-chocolate">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>ICED CHOCOLATE</h2>
+            <span class="sheet-price">₱140</span>
+          </div>
+          <p class="sheet-desc">A rich cocoa blend poured over ice for a cool, chocolatey finish.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#iced-chocolate">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-hot-chocolate">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>HOT CHOCOLATE</h2>
+            <span class="sheet-price">₱130</span>
+          </div>
+          <p class="sheet-desc">Warm, velvety cocoa steamed until silky, sweet, and cozy.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#hot-chocolate">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-cappuccino">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>CAPPUCCINO</h2>
+            <span class="sheet-price">₱130</span>
+          </div>
+          <p class="sheet-desc">Espresso lifted with steamed milk and a soft cap of foam.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#cappuccino">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-mocha">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>MOCHA</h2>
+            <span class="sheet-price">₱170</span>
+          </div>
+          <p class="sheet-desc">Espresso and chocolate folded into milk for a sweet cafe classic.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#mocha">ADD TO BASKET</a>
+        </div>
+      </article>
+      <article class="sheet-panel panel-spanish-latte">
+        <div class="sheet-inner">
+          <label class="sheet-close" for="sheet-none">Close</label>
+          <div class="sheet-head">
+            <h2>SPANISH LATTE</h2>
+            <span class="sheet-price">₱170</span>
+          </div>
+          <p class="sheet-desc">Espresso sweetened with condensed milk for a smooth, creamy cup.</p>
+          <p class="addons-label">Add ons:</p>
+          <div class="addons">
+          <label><input type="checkbox"> Oat milk</label>
+          <label><input type="checkbox"> Extra Shot</label>
+          <label><input type="checkbox"> Extra syrup / sauce</label>
+          <label><input type="checkbox"> Not now</label>
+          </div>
+          <div class="qty"><input type="number" min="1" max="20" value="1" aria-label="Quantity"></div>
+          <a class="btn-coral sheet-add" href="basket.html#spanish-latte">ADD TO BASKET</a>
+        </div>
+      </article>
+  </div>
+</div>
+</body>
+</html>
